@@ -31,7 +31,7 @@ const Page = () => {
         <div className="background-img">
           <Image
             id="product-banner"
-            src="/product1.jpg"
+            src="product1.jpg"
             alt="Picture of the background"
             width={0}
             height={0}
