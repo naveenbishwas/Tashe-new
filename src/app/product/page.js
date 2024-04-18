@@ -32,7 +32,7 @@ const Page = () => {
           <Image
             id="product-banner"
             src="product1.jpg"
-            alt="Picture of the background"
+            alt="Picture of the background loading"
             width={0}
             height={0}
             unoptimized
