@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -47,23 +48,23 @@ export default function Home() {
             </label>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <a href="#">Product</a>
+                <Link href="/product">Product</Link>
               </li>
               <li>
-                <a href="#">About us</a>
+                <Link href="/aboutus">About us</Link>
               </li>
               <li>
-                <a href="#">Infrastructure</a>
+                <Link href="/">Infrastructure</Link>
               </li>
 
               <li id="contact">
                 <div className="">
-                  <a id="black" href="#">
+                  <Link id="black" href="#">
                     Contact us
-                  </a>
+                  </Link>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
