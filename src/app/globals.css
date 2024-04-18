@@ -905,12 +905,10 @@ footer {
   right: 0;
 }
 
-#check,
-#checkbtn {
+#check {
   display: none;
 }
 
-#nav-icon,
 .checkbtn {
   display: none;
 }
@@ -1224,5 +1222,9 @@ footer {
   .form-middle textarea {
     width: 100%;
     margin-top: 6%;
+  }
+
+  .checkbtn {
+    display: block;
   }
 }

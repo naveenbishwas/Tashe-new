@@ -297,7 +297,7 @@ export default function Home() {
                 <div className="section-two-top-boxes-one-background"></div>
                 <div className="section-two-top-boxes-one-show">
                   <Image
-                    src="/tank.jpg"
+                    src={"/tank.JPG"}
                     alt="bim-image"
                     width={0}
                     height={0}
@@ -336,7 +336,7 @@ export default function Home() {
                 <div className="section-two-top-boxes-one-background-two"></div>
                 <div className="section-two-top-boxes-one-show">
                   <Image
-                    src="/tank2.jpg"
+                    src="/tank2.JPG"
                     alt="bim-image"
                     width={0}
                     height={0}
@@ -379,7 +379,7 @@ export default function Home() {
                 <div className="section-two-top-boxes-one-background-two"></div>
                 <div className="section-two-top-boxes-one-show">
                   <Image
-                    src="/transform.jpg"
+                    src="/transform.JPG"
                     alt="bim-image"
                     width={0}
                     height={0}
