@@ -7,7 +7,7 @@ export default function Home() {
       <div className="back-image">
         <div className="background-img">
           <Image
-            src="/banner3.JPG"
+            src={"/banner3.JPG"}
             alt="Picture of the background"
             width={0}
             height={0}

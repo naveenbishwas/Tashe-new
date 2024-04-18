@@ -910,6 +910,11 @@ footer {
   display: none;
 }
 
+#nav-icon,
+.checkbtn {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   #check {
     display: none;
