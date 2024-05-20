@@ -20,7 +20,7 @@ export default function Home() {
         <div className="navbar">
           <div className="logo">
             <Image
-              src={"/tashe5.png"}
+              src={"/new-logo.png"}
               alt="Logo"
               width={0}
               height={0}
@@ -94,7 +94,9 @@ export default function Home() {
             been serving in india and across the globe to various transformer
             OEMs.
           </p>
-          <button>Know More</button>
+          <Link href="/about-us">
+            <button>Know More</button>
+          </Link>
         </div>
       </header>
 
@@ -113,12 +115,14 @@ export default function Home() {
             </div>
             <div className="section-one-top-right">
               <p>
-                Tashe Power India Works serves the greater San Francisco Bay
-                Area, Silicon Valley, and all of Northern California, Tashe
-                Power India Works is your premier design-build, miscellaneous
-                metals, and structural coruggated partner.
+                We, at Tashe , are customer-centric in our focus and believe in
+                maintaining a long-term relationship with our customers. With
+                the knowledge and experience of our people, we are able to
+                deliver quality products efficiently and cost-effectively
               </p>
-              <button>Why we are different</button>
+              <Link href="/infrastructure">
+                <button>Why we are different</button>
+              </Link>
             </div>
           </div>
           <div className="section-top-bottom">
@@ -343,12 +347,12 @@ export default function Home() {
                     unoptimized
                   />
                   <h3 class="bim" id="pre">
-                    Finn Walls
+                    Corrugated Finwalls for Transformers
                   </h3>
                 </div>
                 <div className="section-two-top-boxes-one-hide">
                   <div className="section-two-top-boxes-one-hide-top">
-                    <h3 id="pre-con"> Finn Walls</h3>
+                    <h3 id="pre-con">Corrugated Finwalls for Transformers</h3>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -365,11 +369,9 @@ export default function Home() {
                   </div>
                   <div className="section-two-top-boxes-one-hide-bottom">
                     <p id="coruggated">
-                      Tashe Power India Corrugated fin walls are formed on a
-                      fully automatic folding and welding line. Our corrugated
-                      fins are passed for Fatigue Test as per SANS 780:2009 at
-                      11,000 cycles, which is equivalent to 30 years of
-                      transformer life
+                      Our corrugated fins are passed for Fatigue Test as per
+                      SANS 780:2009 at 11,000 cycles, which is equivalent to 30
+                      years of transformer life.
                     </p>
                   </div>
                 </div>
@@ -408,10 +410,9 @@ export default function Home() {
                   </div>
                   <div className="section-two-top-boxes-one-hide-bottom">
                     <p id="shop-fab">
-                      We manufacture corrugated and conventional transformer
-                      tanks ranging from 10KVA to 15MVA. Our tanks stand out due
-                      to their manufacturing quality with highest dimensional
-                      accuracy and weld seam quality.
+                      We manufacture tanks ranging from 100KVA to 15MVA. Our
+                      tanks stand out due to their manufacturing quality and
+                      amazing aesthetical finish
                     </p>
                   </div>
                 </div>
@@ -516,10 +517,10 @@ export default function Home() {
 
           <div className="section-two-bottom">
             <p>
-              Tashe Power India Works cares about your target, including
-              schedule, budget, and market impact. Tashe is your heavy-lift
-              partner, skilled in solving problems with accuracy, speed, and
-              efficiency unmatched by any other coruggated company.
+              We, at Tashe, are customer-centric in our focus and believe in
+              maintaining a long-term relationship with our customers. With the
+              knowledge and experience of our people, we are able to deliver
+              quality products efficiently and cost-effectively
             </p>
             <span>
               <button>Contact us Today</button>
@@ -759,16 +760,17 @@ export default function Home() {
                     />
                   </g>
                 </svg>
-                <h1>Stanford University, Stanford, CA</h1>
+                <h1>Voltamp Transformers, Oman: 3D modelling</h1>
                 <p>
-                  Tashe has worked with Stanford University in California on a
-                  multitude of projects. These projects include structural
-                  coruggated, complicated hip and valley roof structure, and
-                  Christmas treeing for Crothers Dining Hall. Seismic upgrades
-                  were made in the Peterson Building as well as Structural
-                  coruggated infill in a concrete tilt up building for the
-                  Aquatics Center. Additional services include stairs and
-                  railings, ornamental ironwork, and more.
+                  Weight of the tank is a very critical part for any
+                  transformer. We worked with our customer Voltamp and started
+                  designing all the tanks on the latest 3D software. This not
+                  only helped us to zero down on the weight of the tanks but
+                  also helped us improvise the tank designs with continuous
+                  discussion with customer and thereby achieving a seamless
+                  production process. Now all our tanks are designed on 3D
+                  modelling and we are able to control many unexpected problems
+                  during our designing stage itself.
                 </p>
               </div>
             </div>
@@ -838,16 +840,17 @@ export default function Home() {
                     />
                   </g>
                 </svg>
-                <h1>Stanford University, Stanford, CA</h1>
+                <h1>Sneda Transformers, Ghana: Designing and Supply Chain</h1>
                 <p>
-                  Tashe has worked with Stanford University in California on a
-                  multitude of projects. These projects include structural
-                  coruggated, complicated hip and valley roof structure, and
-                  Christmas treeing for Crothers Dining Hall. Seismic upgrades
-                  were made in the Peterson Building as well as Structural
-                  coruggated infill in a concrete tilt up building for the
-                  Aquatics Center. Additional services include stairs and
-                  railings, ornamental ironwork, and more.
+                  Our client, Sneda Transformers in Ghana, was starting a new
+                  factory and they chose us to be their supplier for tanks. We
+                  not only helped them in designing the complete mechanical
+                  structure of the tank but also helped procure all the major
+                  raw materials for transformer and send them in the same
+                  container along with tanks. This helped them save their
+                  resources of following up with various vendors as we procured
+                  everything and shipped along with tanks thereby creating cost
+                  savings in logistics.
                 </p>
               </div>
             </div>
@@ -857,7 +860,7 @@ export default function Home() {
           </div>
           <hr id="sc-four-line" />
 
-          <div className="section-four-box-one">
+          {/* <div className="section-four-box-one">
             <div className="section-four-box-one-left">
               <div className="section-four-box-one-left-image">
                 <Image
@@ -941,7 +944,7 @@ export default function Home() {
               <h1>04</h1>
             </div>
           </div>
-          <hr id="sc-four-line" />
+          <hr id="sc-four-line" /> */}
         </div>
       </div>
 
@@ -1415,7 +1418,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="section-six">
+      {/* <div className="section-six">
         <div className="section-six-header">
           <h1>OUR ACHIEVEMENTS</h1>
           <p>
@@ -1512,18 +1515,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <footer>
         <div className="footer-df">
           <div className="footer-left">
             <div className="footer-left-top">
-              <h2>Tashe Power India</h2>
+              <h2>TTASHE POWER INDIA</h2>
               <p>
-                We thrive on jobs that other metal contractors avoid. From
-                simple embeds to the most complex curved stair assemblies and
-                challenging structural coruggated, we have what it takes to get
-                the job done.
+                A great place to work where people are inspired, involved and
+                motivated.
               </p>
               <hr id="footer-line" />
             </div>
@@ -1541,7 +1542,7 @@ export default function Home() {
               </div>
 
               <div className="footer-left-middle-right">
-                <li id="first">
+                <li id="first-pro">
                   <a href="#">Testimonials</a>
                 </li>
                 <li>
@@ -1568,7 +1569,7 @@ export default function Home() {
                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
                     />
                   </svg>
-                  <h5>149-325-0709</h5>
+                  <h5>+919711718600</h5>
                 </div>
                 <div className="footer-left-last-call-mail-2">
                   <svg
@@ -1598,8 +1599,8 @@ export default function Home() {
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg>
                   <h6>
-                    Works: F-194, Khushkhera Industrial Area, Bhiwadi, District
-                    Alwar, Rajasthan 301019(India)
+                    Unit 1: F-194, Khushkhera Industrial Area, Bhiwadi, District
+                    Alwar, Rajasthan 301019 (India)
                   </h6>
                 </div>
 
@@ -1615,8 +1616,25 @@ export default function Home() {
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg>
                   <h6>
-                    Regd.Address: R-616, New Rajinder Nagar, New Delhi
-                    110060(India)
+                    Unit 2: G1/172, Khushkhera Industrial Area, Bhiwadi,
+                    District Alwar, Rajasthan 301019 (India)
+                  </h6>
+                </div>
+
+                <div className="footer-left-last-address-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-geo-alt-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                  </svg>
+                  <h6>
+                    Unit 3: F-73, Karoli Industrial Area, Bhiwadi, District
+                    Alwar, Rajasthan 301019 (India)
                   </h6>
                 </div>
               </div>
