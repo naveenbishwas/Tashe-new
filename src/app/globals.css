@@ -1125,7 +1125,17 @@ footer {
   }
 
   .section-three-bottom {
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .section-three-bottom-logo-one img,
+  .section-three-bottom-logo-two img {
+    width: 80px !important;
+    height: auto;
+  }
+
+  .section-three-bottom-logo-one {
+    gap: 50px;
   }
 
   .section-three-bottom > div {
