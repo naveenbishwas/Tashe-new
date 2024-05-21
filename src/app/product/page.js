@@ -43,15 +43,17 @@ const Page = () => {
       </div>
       <header>
         <div className="navbar">
-          <div className="logo">
-            <Image
-              src={"/tashe5.png"}
-              alt="Logo"
-              width={0}
-              height={0}
-              unoptimized
-            />
-          </div>
+          <Link href="/">
+            <div className="logo">
+              <Image
+                src={"/new-logo.png"}
+                alt="Logo"
+                width={0}
+                height={0}
+                unoptimized
+              />
+            </div>
+          </Link>
 
           <nav id="navigation">
             <input type="checkbox" id="check" />
@@ -117,8 +119,9 @@ const Page = () => {
             <br /> transformer tanks
           </h1>
           <p id="product-banner-text">
-            Our tanks stand out due to their manufacturing quality with highest
-            dimensional accuracy and weld seam quality.
+            We manufacture corrugated and conventional transformer tanks ranging
+            from 100KVA to 15MVA. Our tanks stand out due to their manufacturing
+            quality with highest dimensional accuracy and weld seam quality.
           </p>
         </div>
       </header>
