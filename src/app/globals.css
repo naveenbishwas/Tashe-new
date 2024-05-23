@@ -488,7 +488,7 @@ header {
   align-items: center;
   margin-top: 3%;
   gap: 137px;
-  animation: logo-slider 50s infinite ease-in-out;
+  animation: logo-slider 50s infinite linear;
 }
 
 .section-three-bottom-logo-two {
@@ -687,14 +687,14 @@ header {
 
 .section-five-line {
   border: 2px solid rgb(198, 198, 198);
-  width: 450px;
+  width: 482px;
   margin-top: 4%;
   transition: all 0.4s ease;
 }
 
 .section-five-right-one-right h4 {
   font-weight: normal;
-  font-size: 19px;
+  font-size: 14px;
 }
 
 .section-five-right-one-right h6 {
