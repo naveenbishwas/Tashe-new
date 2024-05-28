@@ -421,7 +421,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="section-two-bottom-boxes">
+            {/* <div className="section-two-bottom-boxes">
               <div className="section-two-top-boxes-two">
                 <div className="section-two-top-boxes-one-background-two"></div>
                 <div className="section-two-top-boxes-one-show">
@@ -514,7 +514,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="section-two-bottom">
@@ -1150,7 +1150,7 @@ export default function Home() {
                   ETS, the supplier of choice to major electrical/water...
                 </h4>
                 {/* <h6>
-                  <span id="bold">Novo |</span> 150 Projects
+                  <span id="bold">Novo |</spnan> 150 Projects
                 </h6> */}
               </div>
             </div>
@@ -1262,7 +1262,7 @@ export default function Home() {
         <div className="footer-df">
           <div className="footer-left">
             <div className="footer-left-top">
-              <h2>TTASHE POWER INDIA</h2>
+              <h2>TASHE POWER INDIA</h2>
               <p>
                 A great place to work where people are inspired, involved and
                 motivated.
@@ -1275,7 +1275,7 @@ export default function Home() {
                   <a href="#">Who we are</a>
                 </li>
                 <li>
-                  <a href="#">corugated Fabrications</a>
+                  <a href="#">Corugated Fabrications</a>
                 </li>
                 <li>
                   <a href="#">Our Work</a>
