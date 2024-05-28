@@ -1271,7 +1271,7 @@ export default function Home() {
             </div>
             <div className="footer-left-middle">
               <div className="footer-left-middle-left">
-                <li id="first">
+                <li id="fir">
                   <a href="#">Who we are</a>
                 </li>
                 <li>
