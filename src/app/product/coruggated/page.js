@@ -5,8 +5,27 @@ import "./coruggated.css";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+
+const animation = { duration: 50000, easing: (t) => t };
 
 const Page = () => {
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    renderMode: "performance",
+    drag: false,
+    created(s) {
+      s.moveToIdx(5, true, animation);
+    },
+    updated(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    animationEnded(s) {
+      s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+  });
+
   const { ref: processAnimationOne, inView: isProcessOneVis } = useInView();
   const { ref: processAnimationTwo, inView: isProcessTwoVis } = useInView();
   const { ref: processAnimationThree, inView: isProcessThreeVis } = useInView();
@@ -258,7 +277,7 @@ const Page = () => {
           </div>
         </div> */}
 
-        <div className="product-section-one-first">
+        {/* <div className="product-section-one-first">
           <div className="product-section-one-first-content">
             <div
               className="product-section-one-first-content-left"
@@ -302,9 +321,9 @@ const Page = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="product-section-one-second">
+        {/* <div className="product-section-one-second">
           <div className="product-section-one-second-left">
             <Image
               src={"/product-page-img2.jpeg"}
@@ -322,6 +341,114 @@ const Page = () => {
               tanks go for packing as per international standards and shipped
               globally.
             </p>
+          </div>
+        </div> */}
+      </div>
+
+      <div className="section-one">
+        <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 956 80.7">
+          <path
+            class="st0"
+            d="M953.2,64.3L902.5,3.5C900.7,1.3,897.9,0,895,0h-64.3H124.2H59.9c-2.9,0-5.7,1.3-7.5,3.5L1.7,64.3
+	C-3.6,70.7,1,80.4,9.3,80.4h115h706.4h115C953.9,80.4,958.5,70.7,953.2,64.3z"
+          />
+        </svg>
+        <div className="section-one-df">
+          <div className="section-one-top">
+            <div className="section-one-top-left">
+              <h1>Proven Durability:</h1>
+            </div>
+            <div className="section-one-top-right">
+              <p>
+                "Our fins are passed for Fatigue Test at 11,000 cycles{" "}
+                <span id="cor-bold">
+                  equivalent to 30 year of transformer life"
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <div ref={sliderRef} className="keen-slider" id="durab">
+            <div className="keen-slider__slide number-slide1">
+              <div className="section-top-bottom">
+                <Image
+                  src={"/banner4.JPG"}
+                  alt="About-us Image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  objectFit="cover"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide2">
+              <div className="section-top-bottom">
+                <Image
+                  src={"/banner-img.png"}
+                  alt="About-us Image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  objectFit="cover"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide3">
+              <div className="section-top-bottom">
+                <Image
+                  src={"/banner4.JPG"}
+                  alt="About-us Image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  objectFit="cover"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide4">
+              <div className="section-top-bottom">
+                <Image
+                  src={"/banner-img.png"}
+                  alt="About-us Image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  objectFit="cover"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide5">
+              {" "}
+              <div className="section-top-bottom">
+                <Image
+                  src={"/banner4.JPG"}
+                  alt="About-us Image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  objectFit="cover"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide6">
+              {" "}
+              <div className="section-top-bottom">
+                <Image
+                  src={"/banner-img.png"}
+                  alt="About-us Image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  objectFit="cover"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
