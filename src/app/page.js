@@ -53,7 +53,19 @@ export default function Home() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/product">Product</Link>
+                <div className="dropdown">
+                  <Link id="product-p" href="/product/transformer">
+                    Product
+                  </Link>
+                  <ul id="dropdown-bottm">
+                    <Link href="/product/transformer">
+                      <li>Transformer</li>
+                    </Link>
+                    <Link href="/product/coruggated">
+                      <li>Coruggated</li>
+                    </Link>
+                  </ul>
+                </div>
               </li>
               <li>
                 <Link href="/aboutus">About us</Link>

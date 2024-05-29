@@ -92,6 +92,38 @@ header {
   color: #fd763c;
 }
 
+#dropdown-bottm {
+  position: relative;
+  display: none;
+}
+
+#dropdown-bottm li {
+  color: #000;
+}
+
+.dropdown:hover #dropdown-bottm {
+  display: block;
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+  position: absolute;
+  margin-top: -2px;
+  width: 120px;
+  margin-left: 20px;
+}
+
+#dropdown-bottm li {
+  font-size: 18px;
+  padding: 2px 8px;
+  margin-top: 4px;
+  text-align: center;
+  /* color: orangered; */
+}
+
+#dropdown-bottm li:hover {
+  color: orangered;
+}
+
 .back-image {
   position: relative;
 }

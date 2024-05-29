@@ -78,7 +78,19 @@ const Page = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/product">Product</Link>
+                <div className="dropdown">
+                  <Link id="product-p" href="/product/transformer">
+                    Product
+                  </Link>
+                  <ul id="dropdown-bottm">
+                    <Link href="/product/transformer">
+                      <li>Transformer</li>
+                    </Link>
+                    <Link href="/product/coruggated">
+                      <li>Coruggated</li>
+                    </Link>
+                  </ul>
+                </div>
               </li>
               <li>
                 <Link href="/aboutus">About us</Link>
@@ -114,10 +126,7 @@ const Page = () => {
           <hr id="header-line" />
         </div>
         <div className="header-text">
-          <h1 id="product-banner-heading">
-            corrugated and conventional
-            <br /> transformer tanks
-          </h1>
+          <h1 id="product-banner-heading">Transformer tanks</h1>
           <p id="product-banner-text">
             We manufacture corrugated and conventional transformer tanks ranging
             from 100KVA to 15MVA. Our tanks stand out due to their manufacturing
@@ -146,19 +155,21 @@ const Page = () => {
           </div>
           <div className="product-section-one-first-content">
             <div className="product-section-one-first-content-left">
+              <h1>Tank manufacturing</h1>
               <p>
-                Tashe Works uses a forward-thinking approach, leveraging
-                cutting-edge Building Information Modeling (BIM) coordination
-                software. This technological advantage enables Summit to tackle
-                the most intricate and demanding construction projects with
-                accuracy, in a cost-effective manner. Our ability to seamlessly
-                integrate this software with our seasoned expertise allows us to
-                meet the complex needs of any construction site, regardless of
-                scale or intricacy, while still adhering to strict timelines.
-                Summit Steel Works is paving the way for progress in the steel
-                industry by embracing innovation and ensuring that our clients
-                visions are carefully executed, on time and with exceptional
-                quality.
+                All the tanks are made using customer drawings and then
+                converted to 3D using latest 3D softwares to understand the
+                design better and avoid any mistakes during production.
+              </p>
+              <p>
+                All the metal preparation is done on high precision laser
+                cutting machines or CNC press brake machines. Various tank
+                fitments like top covers, cable boxes, conservators are made
+                with highest accuracy and precise positioning. Once the assembly
+                is done with tack welds, the complete job goes under stringent
+                dimensional and visual checks before passing them on to welding
+                stage. Welding is done as per approved WPS/PQR by highly
+                experienced and certified welders.
               </p>
             </div>
             <div className="product-section-one-first-content-right">
@@ -176,7 +187,7 @@ const Page = () => {
         <div className="product-section-one-second">
           <div className="product-section-one-second-left">
             <Image
-              src={"product-page-img2.jpeg"}
+              src={"/product-page-img2.jpeg"}
               alt="Loading img"
               width={0}
               height={0}
@@ -184,53 +195,84 @@ const Page = () => {
             />
           </div>
           <div className="product-section-one-second-right">
+            <h1>Leak Testing</h1>
             <p>
-              Summit Steel Works successfully deployed BIM coordination on a
-              recent landmark project (40+ million contract on a 6+ Billion
-              project, coordinating 900+ tons of steel), and holds these assets
-              and experience at the ready to support your next project.
+              The most reliable and stringent tests are conducted under
+              prescribed pressure to eliminate any leakage. Every tank goes
+              through three stages of leak testing:
             </p>
-            <h3>BIM Capabilities:</h3>
-            <li>
-              Export steel models (dwg, ifc) and import into BIM coordination
-              software to share with other trades
-            </li>
-            <li>
-              Perform clash detection tests to coordinate with other trades on
-              project
-            </li>
-            <li>
-              Coordinate construction sequencing for smoother scheduling and
-              installation workflow
-            </li>
+            <li>1. Ultra-violet penetrant test</li>
+            <li>2. Air and soap water test</li>
+            <li>3. Pressure holding test</li>
+            <p>This ensures that the tanks are completely leak free.</p>
           </div>
         </div>
 
-        <div className="product-section-one-third"></div>
-      </div>
+        <div className="product-section-one-first">
+          <div className="product-section-one-first-content">
+            <div
+              className="product-section-one-first-content-left"
+              id="surface"
+            >
+              <h1>Surface treatment and corrosion protection</h1>
+              <p>
+                Tashe painting process is in accordance to ISO 12944:2008: C3,
+                C4, C5 (L, M, H, VH). DFT can be maintained as per customer
+                requirements suitable for the corrosive environment category.
+              </p>
+              <p>
+                We shot blast every single tank as per Sa 3/Sa 2.5 to ensure
+                absolute surface cleaning and paint adhesion. Different painting
+                schemes can be offered for obtaining optimum corrosion
+                protection.
+              </p>
 
-      <div className="product-section-two">
-        <div className="product-section-two-left">
-          <h1>
-            QUALITY <span id="orange">&</span> SUSTAINABILITY
-          </h1>
-          <p>
-            Summit Steel Works uses high-quality materials made to last. We
-            don’t cut corners, and we take our work seriously. Throughout
-            construction projects, Summit aims to minimize waste and energy
-            consumption as much as possible. Summit avoids disturbing the
-            natural environment surrounding construction sites.
-          </p>
+              <li>
+                surface surface surface surface surface surface Zinc Metallizing
+                or Zinc Rich primers can be used to provide higher corrosion
+                resistance suitable to C5VH environments
+              </li>
+              <li>
+                Epoxy based primers, intermediate or top coats are done using
+                flood painting for equal coats even at the hidden areas
+              </li>
+              <li>Spray painting is also applied for superior finish</li>
+              <li>
+                All jobs are subject to force drying in ovens for faster paint
+                drying and making them ready for further coats
+              </li>
+            </div>
+            <div className="product-section-one-first-content-right">
+              <Image
+                src={"/product-page-img-1.jpeg"}
+                width={0}
+                height={0}
+                unoptimized
+                alt="Loading Image"
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="product-section-two-right">
-          <Image
-            src={"/product-page-img3.jpeg"}
-            width={0}
-            height={0}
-            alt="loading img"
-            unoptimized
-          />
+        <div className="product-section-one-second">
+          <div className="product-section-one-second-left">
+            <Image
+              src={"/product-page-img2.jpeg"}
+              alt="Loading img"
+              width={0}
+              height={0}
+              unoptimized
+            />
+          </div>
+          <div className="product-section-one-second-right" id="pdi">
+            <h1>Pre-dispatch Inspections (PDI)</h1>
+            <p>
+              At Tashe, 100% tanks go through a stringent PDI with detailed
+              checklists made customised as per every customer. Once passed, the
+              tanks go for packing as per international standards and shipped
+              globally.
+            </p>
+          </div>
         </div>
       </div>
 

@@ -3,6 +3,38 @@ body {
   animation: transitionIn 0.5s;
 }
 
+#dropdown-bottm {
+  position: relative;
+  display: none;
+}
+
+#dropdown-bottm li {
+  color: #000;
+}
+
+.dropdown:hover #dropdown-bottm {
+  display: block;
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+  position: absolute;
+  margin-top: -2px;
+  width: 120px;
+  margin-left: 20px;
+}
+
+#dropdown-bottm li {
+  font-size: 18px;
+  padding: 2px 8px;
+  margin-top: 4px;
+  text-align: center;
+  /* color: orangered; */
+}
+
+#dropdown-bottm li:hover {
+  color: orangered;
+}
+
 @keyframes transitionIn {
   from {
     opacity: 0;
@@ -13,8 +45,49 @@ body {
   }
 }
 
+.technical-specfication {
+  margin-top: 10%;
+}
+
+.technical-specfication h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+thead {
+  background: #007bff; /* Adjusted to a blue color */
+  color: white;
+}
+thead th {
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+}
+th,
+td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+tfoot {
+  font-size: 0.9em;
+  color: #666;
+  background: #e9e9e9;
+  text-align: left;
+}
+tfoot td {
+  padding: 15px;
+  border-top: 2px solid #ddd;
+}
+
 #product-background-color {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 #product-banner-heading {
@@ -76,10 +149,11 @@ body {
 .product-section-one-first-content-left p {
   font-size: 17px;
   line-height: 1.5;
+  margin-top: 3%;
 }
 
 .product-section-one-first-content {
-  margin-top: 3%;
+  margin-top: 7%;
 }
 
 .product-section-one-second {
@@ -88,14 +162,13 @@ body {
   margin-top: 6%;
 }
 
+.product-section-one-second-right h1 {
+  margin-top: 6%;
+}
+
 .product-section-one-second-right p {
   margin-top: 20px;
   font-size: 17px;
-}
-
-.product-section-one-second-right h3 {
-  margin-top: 5%;
-  font-size: 1.6rem;
 }
 
 .product-section-one-second-right li {
@@ -104,17 +177,6 @@ body {
   position: relative;
 }
 
-.product-section-one-second-right li::after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  left: -2%;
-  width: 3px;
-  height: 3px;
-  border: 1px solid #000;
-  background-color: #000;
-  border-radius: 50px;
-}
 .process-steps h1 {
   font-family: "Saira Condensed";
   font-size: 5rem;
@@ -122,6 +184,25 @@ body {
   letter-spacing: -3px;
   text-align: center;
   margin-top: 5%;
+}
+
+#surface li {
+  margin-top: 3%;
+  position: relative;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+#surface li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -15px;
+  width: 2px;
+  height: 2px;
+  border: 1px solid #000;
+  background-color: #000;
+  border-radius: 50%;
 }
 
 .steps-container {
@@ -659,4 +740,50 @@ body {
 
 .product-section-two-left {
   max-width: 45%;
+}
+
+@media screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    color: #007bff;
+  }
+  td:nth-of-type(1):before {
+    content: "Description";
+  }
+  td:nth-of-type(2):before {
+    content: "Minimum";
+  }
+  td:nth-of-type(3):before {
+    content: "Maximum";
+  }
 }
