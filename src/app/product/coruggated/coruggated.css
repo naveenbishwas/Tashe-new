@@ -86,21 +86,41 @@ tfoot td {
   border-top: 2px solid #ddd;
 }
 
+.section-one-top {
+  display: block;
+}
+
+.section-one-top h1 {
+  font-size: 3rem;
+  color: var(--orange-color);
+}
+
 .section-one-top-right p {
   max-width: 80%;
-  font-size: 28px;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: normal;
+}
+
+#cor-bold {
+  font-weight: bolder;
+}
+
+.section-one {
+  background-color: #000;
+  /* background-color: #fff; */
+  color: #fff;
+  padding: 2% 15%;
+}
+
+.section-top-bottom {
+  margin-left: 70px;
 }
 
 #durab {
   width: 500px;
-  height: auto;
+  height: 350px;
 }
-
-/* #durab > div {
-  width: 300px;
-  height: auto;
-  background-color: #fff;
-} */
 
 #product-background-color {
   opacity: 0.6;

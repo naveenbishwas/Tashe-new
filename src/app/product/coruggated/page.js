@@ -356,7 +356,7 @@ const Page = () => {
         <div className="section-one-df">
           <div className="section-one-top">
             <div className="section-one-top-left">
-              <h1>Proven Durability:</h1>
+              <h1>Proven Durability</h1>
             </div>
             <div className="section-one-top-right">
               <p>
@@ -372,7 +372,7 @@ const Page = () => {
             <div className="keen-slider__slide number-slide1">
               <div className="section-top-bottom">
                 <Image
-                  src={"/banner4.JPG"}
+                  src={"/embossing-type.png"}
                   alt="About-us Image"
                   width={0}
                   height={0}
@@ -385,7 +385,7 @@ const Page = () => {
             <div className="keen-slider__slide number-slide2">
               <div className="section-top-bottom">
                 <Image
-                  src={"/banner-img.png"}
+                  src={"/embossing-pos.png"}
                   alt="About-us Image"
                   width={0}
                   height={0}
@@ -398,7 +398,7 @@ const Page = () => {
             <div className="keen-slider__slide number-slide3">
               <div className="section-top-bottom">
                 <Image
-                  src={"/banner4.JPG"}
+                  src={"/embossing-one.png"}
                   alt="About-us Image"
                   width={0}
                   height={0}
@@ -411,35 +411,7 @@ const Page = () => {
             <div className="keen-slider__slide number-slide4">
               <div className="section-top-bottom">
                 <Image
-                  src={"/banner-img.png"}
-                  alt="About-us Image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  objectFit="cover"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide5">
-              {" "}
-              <div className="section-top-bottom">
-                <Image
-                  src={"/banner4.JPG"}
-                  alt="About-us Image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  objectFit="cover"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide6">
-              {" "}
-              <div className="section-top-bottom">
-                <Image
-                  src={"/banner-img.png"}
+                  src={"/embossing-two.png"}
                   alt="About-us Image"
                   width={0}
                   height={0}
