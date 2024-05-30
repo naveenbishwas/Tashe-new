@@ -108,22 +108,33 @@ tfoot td {
 
 .section-one {
   background-color: #000;
-  /* background-color: #fff; */
   color: #fff;
   padding: 2% 15%;
 }
 
+.corugaated-df {
+  display: flex;
+  gap: 2%;
+  margin-top: -5%;
+}
+
+.section-one {
+  padding: 5% 5% 0 5%;
+  margin-top: 5%;
+}
+
+#Layer_1 {
+  margin-top: -8%;
+  position: relative;
+}
+
+.corugaated-df > img {
+  width: 100%;
+  height: auto;
+}
+
 .section-top-bottom {
-  margin-left: 70px;
-}
-
-.section-one-df {
-  padding-bottom: 2%;
-}
-
-#durab {
-  width: 500px;
-  height: 350px;
+  border: none;
 }
 
 #product-background-color {
