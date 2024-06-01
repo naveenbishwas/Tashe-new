@@ -3,6 +3,15 @@ body {
   animation: transitionIn 0.5s;
 }
 
+#corru-header h4 {
+  position: absolute;
+  left: 10%;
+  font-size: 30px;
+  color: #fff;
+  margin-top: -30px;
+  color: #f96120;
+}
+
 #dropdown-bottm {
   position: relative;
   display: none;
@@ -146,6 +155,9 @@ tfoot td {
   line-height: 1.1;
   margin-top: 12%;
   word-spacing: 7px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Saira Condensed";
 }
 
 #product-banner-text {

@@ -3,6 +3,25 @@ body {
   animation: transitionIn 0.5s;
 }
 
+.transformer-heading h1 {
+  font-size: 4.3rem;
+  line-height: 1.1;
+  margin-top: 12%;
+  word-spacing: 7px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 5%;
+  font-family: "Saira Condensed";
+}
+
+.transformer-heading p {
+  font-size: 22px;
+  max-width: 45%;
+  margin-top: 2%;
+  color: #fff;
+  margin-left: 5%;
+}
+
 #dropdown-bottm {
   position: relative;
   display: none;
@@ -55,8 +74,7 @@ body {
   margin-top: 12%;
   word-spacing: 7px;
 }
-
-#product-banner-text {
+#trans-header #product-banner-text {
   font-size: 22px;
   max-width: 45%;
   margin-top: 2%;

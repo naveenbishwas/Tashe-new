@@ -37,6 +37,7 @@ const Page = () => {
             width={0}
             height={0}
             unoptimized
+            priority
           />
         </div>
         <div className="background-color" id="product-background-color"></div>
@@ -93,7 +94,7 @@ const Page = () => {
                 </div>
               </li>
               <li>
-                <Link href="/aboutus">About us</Link>
+                <Link href="/about-us">About us</Link>
               </li>
               <li>
                 <Link href="/">Infrastructure</Link>
@@ -125,9 +126,10 @@ const Page = () => {
         <div className="header-lin">
           <hr id="header-line" />
         </div>
-        <div className="header-text">
-          <h1 id="product-banner-heading">Transformer tanks</h1>
-          <p id="product-banner-text">
+
+        <div className="transformer-heading">
+          <h1>Transformer tanks</h1>
+          <p>
             We manufacture corrugated and conventional transformer tanks ranging
             from 100KVA to 15MVA. Our tanks stand out due to their manufacturing
             quality with highest dimensional accuracy and weld seam quality.
@@ -402,7 +404,7 @@ const Page = () => {
                   <a href="#">Who we are</a>
                 </li>
                 <li>
-                  <a href="#">corugated Fabrications</a>
+                  <a href="#">Corrugated Fabrications</a>
                 </li>
                 <li>
                   <a href="#">Our Work</a>
@@ -494,7 +496,7 @@ const Page = () => {
           <div className="footer-right">
             <div className="footer-right-header">
               <h1>
-                WED LOVE TO <span id="footer-hear">HEAR FROM YOU</span>
+                WE LOVE TO <span id="footer-hear">HEAR FROM YOU</span>
               </h1>
               <form action="">
                 <div className="form-top">

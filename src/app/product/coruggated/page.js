@@ -56,6 +56,7 @@ const Page = () => {
             width={0}
             height={0}
             unoptimized
+            priority
           />
         </div>
         <div className="background-color" id="product-background-color"></div>
@@ -112,7 +113,7 @@ const Page = () => {
                 </div>
               </li>
               <li>
-                <Link href="/aboutus">About us</Link>
+                <Link href="/about-us">About us</Link>
               </li>
               <li>
                 <Link href="/">Infrastructure</Link>
@@ -144,7 +145,7 @@ const Page = () => {
         <div className="header-lin">
           <hr id="header-line" />
         </div>
-        <div className="header-text">
+        <div className="header-text" id="corru-header">
           <h1 id="product-banner-heading">Corrugated Fin Walls</h1>
           <p id="product-banner-text">
             Tashe’s Corrugated fin walls are formed on a fully automatic folding
@@ -546,7 +547,7 @@ const Page = () => {
                   <a href="#">Who we are</a>
                 </li>
                 <li>
-                  <a href="#">corugated Fabrications</a>
+                  <a href="#">Corrugated Fabrications</a>
                 </li>
                 <li>
                   <a href="#">Our Work</a>
@@ -638,7 +639,7 @@ const Page = () => {
           <div className="footer-right">
             <div className="footer-right-header">
               <h1>
-                WED LOVE TO <span id="footer-hear">HEAR FROM YOU</span>
+                WE LOVE TO <span id="footer-hear">HEAR FROM YOU</span>
               </h1>
               <form action="">
                 <div className="form-top">
