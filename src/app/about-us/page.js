@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,7 +59,7 @@ const page = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <div className="dropdown">
+                <div className="dropdown" id="for-desk">
                   <Link id="product-p" href="/product/transformer">
                     Product
                   </Link>
@@ -69,6 +71,33 @@ const page = () => {
                       <li>Coruggated</li>
                     </Link>
                   </ul>
+                </div>
+
+                <div className="dropdown" id="for-mobile">
+                  <details>
+                    <summary>
+                      Products
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </summary>
+                    <summary>
+                      <Link href="/product/transformer">Transformer</Link>
+                    </summary>
+                    <summary>
+                      <Link href="/product/coruggated">Coruggated</Link>
+                    </summary>
+                  </details>
                 </div>
               </li>
               <li>
@@ -131,6 +160,32 @@ const page = () => {
           </svg>
         </div>
       </header>
+
+      <div className="about-us">
+        <h1>About us</h1>
+        <p>
+          Established in 2008, we are an ISO 9001:2015 certified company. We are
+          one of the first companies in India to manufacture Corrugated Tanks
+          and Corrugated Fin Walls and have been serving in India and across the
+          globe to various transformer OEMs.
+        </p>
+
+        <p>
+          With a total area of approximately 25,000 sq. feet, our
+          state-of-the-art manufacturing unit houses most modern machines like
+          automatic fin folding and fin welding line, CNC cutting and marking
+          machine, shearing and press brake, dust proof paint shop. We also have
+          an in-house design team who can assist you in making most economical
+          and production oriented tank designs.{" "}
+        </p>
+
+        <p>
+          We, at Tashe, are customer-centric in our focus and believe in
+          maintaining a long-term relationship with our customers. With the
+          knowledge and experience of our people, we are able to deliver quality
+          products efficiently and cost-effectively
+        </p>
+      </div>
 
       <div className="section-two">
         <div className="builder-img">
@@ -567,18 +622,39 @@ const page = () => {
             ></Image>
           </div>
 
-          <div className="inspiring-box-right">
-            <h1>A Journey from Bungees to Structural Steel</h1>
+          <div className="inspiring-box-right" is="mission">
+            <h1>Company Mission:</h1>
             <p>
-              Before the existence of Summit Steel Works, our founders were
-              jumping off bridges. In other words, they found a way to combine
-              business and adrenaline. Pete and Nikki Kockelman were two thirds
-              of the team, along with Pete's brother John, that first brought
-              commercial bungee jumping to the U.S.. Pete had graduated from Cal
-              Poly, San Luis Obispo, with a Mechanical Engineering degree and
-              spent a couple of years with Litton Guidance and Control Systems
-              before starting Bungee Adventures.
+              Our Mission serves as a roadmap towards our Vision and guides
+              every aspect of our working:
             </p>
+
+            <ul>
+              <li>
+                People: Be a great place to work where people are inspired,
+                involved and motivated.
+              </li>
+
+              <li>
+                Product & Quality: Bring to the world a portfolio of quality
+                products that satisfy’s customer needs and desires.
+              </li>
+
+              <li>
+                Partners: Develop a close relationship with both customers and
+                suppliers
+              </li>
+
+              <li>
+                Productivity: Be a highly productive, lean and cost effective
+                organisation
+              </li>
+
+              <li>
+                Profit: Maximize long-term return to shareholders while being
+                mindful of our overall responsibilities
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -608,27 +684,13 @@ const page = () => {
           </div>
 
           <div className="inspiring-box-right">
+            <h1>Company Vision:</h1>
+
             <p>
-              In addition to helping tens of thousands of customers take the
-              leap, the two brothers showcased their skills in commercials for{" "}
-              <b>
-                Reebok, General Motors, and Tostitos, and made numerous
-                television-show appearances.
-              </b>
-            </p>
-            <p>
-              With a desire for continued growth and expansion, the team
-              invented a giant slingshot that used bungee cords to propel two
-              passengers 150 feet into the air, a creation granted a US patent
-              in 1992.
-            </p>
-            <p>
-              As the business grew and developed, Ian Gravina joined the team.
-              The company was then renamed to Gravity Works, which delivered
-              over 30 high-thrill rides to parks around the world. However,
-              following the evaporation of amusement ride sales after the 9/11
-              attacks, the company was sold, and Summit Steel Works was formed
-              by Peter and Nikki Kockelman and Ian Gravina
+              To Become Worldwide Industry Leader in the field of Transformer
+              Cooling Radiators, Fabrication of Transformer Tanks and Electrical
+              Panels / Enclosures, thereby creating maximum value for our
+              Customers, Suppliers and Shareholders
             </p>
           </div>
         </div>
@@ -683,27 +745,17 @@ const page = () => {
           </div>
 
           <div className="inspiring-box-right">
-            <p>
-              In its first 15 years of operation, Summit Steel Works has grown
-              to include a total of 100 dedicated employees, including ten
-              mechanical engineers. Combining our commitment to service with
-              state-of-the-art tools, including Tekla's BIM software suite,
-              Summit Steel Works has established itself as the go-to steel
-              design/build shop in the Bay Area and Northern California.
-            </p>
-            <p>
-              Today, Summit Steel Works is one of the top design/build
-              miscellaneous metals companies in Northern California,
-              pre-qualified with 90% of the largest commercial contractors in
-              Silicon Valley, a growing list.
-            </p>
-            <p>
-              While we’ve shifted our expertise into a different market, we
-              carry the same passion that had us strapping into harnesses and
-              taking that leap. At Summit Steel Works, we fearlessly take on
-              each project with confidence backed by years of experience and
-              achieving desirable results.
-            </p>
+            <h1>Company Values:</h1>
+
+            <ul>
+              <li>Quality: What we do, we do well</li>
+              <li>Honestly & Integrity: Be real and genuine</li>
+              <li>
+                Building Relations: Understand customers and suppliers and build
+                long term association
+              </li>
+              <li>Passion: Committed with heart, mind and soul</li>
+            </ul>
           </div>
         </div>
       </div>

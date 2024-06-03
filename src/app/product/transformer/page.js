@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "./product.css";
+import "./transformer.css";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
@@ -77,7 +77,7 @@ const Page = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <div className="dropdown">
+                <div className="dropdown" id="for-desk">
                   <Link id="product-p" href="/product/transformer">
                     Product
                   </Link>
@@ -89,6 +89,33 @@ const Page = () => {
                       <li>Coruggated</li>
                     </Link>
                   </ul>
+                </div>
+
+                <div className="dropdown" id="for-mobile">
+                  <details>
+                    <summary>
+                      Products
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </summary>
+                    <summary>
+                      <Link href="/product/transformer">Transformer</Link>
+                    </summary>
+                    <summary>
+                      <Link href="/product/coruggated">Coruggated</Link>
+                    </summary>
+                  </details>
                 </div>
               </li>
               <li>
@@ -151,7 +178,7 @@ const Page = () => {
       <div className="product-section-one">
         <div className="product-section-one-first">
           <div className="product-section-one-first-header">
-            <h1>MEETING THE MOST DEMANDING PROJECT SCHEDULES</h1>
+            <h1>Our Products</h1>
           </div>
           <div className="product-section-one-first-content">
             <div className="product-section-one-first-content-left">

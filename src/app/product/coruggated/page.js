@@ -96,7 +96,7 @@ const Page = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <div className="dropdown">
+                <div className="dropdown" id="for-desk">
                   <Link id="product-p" href="/product/transformer">
                     Product
                   </Link>
@@ -108,6 +108,33 @@ const Page = () => {
                       <li>Coruggated</li>
                     </Link>
                   </ul>
+                </div>
+
+                <div className="dropdown" id="for-mobile">
+                  <details>
+                    <summary>
+                      Products
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </summary>
+                    <summary>
+                      <Link href="/product/transformer">Transformer</Link>
+                    </summary>
+                    <summary>
+                      <Link href="/product/coruggated">Coruggated</Link>
+                    </summary>
+                  </details>
                 </div>
               </li>
               <li>
@@ -251,97 +278,6 @@ const Page = () => {
             </tbody>
           </table>
         </div>
-
-        {/* <div className="product-section-one-second">
-          <div className="product-section-one-second-left">
-            <Image
-              src={"/product-page-img2.jpeg"}
-              alt="Loading img"
-              width={0}
-              height={0}
-              unoptimized
-            />
-          </div>
-          <div className="product-section-one-second-right">
-            <h1>Leak Testing</h1>
-            <p>
-              The most reliable and stringent tests are conducted under
-              prescribed pressure to eliminate any leakage. Every tank goes
-              through three stages of leak testing:
-            </p>
-            <li>1. Ultra-violet penetrant test</li>
-            <li>2. Air and soap water test</li>
-            <li>3. Pressure holding test</li>
-            <p>This ensures that the tanks are completely leak free.</p>
-          </div>
-        </div> */}
-
-        {/* <div className="product-section-one-first">
-          <div className="product-section-one-first-content">
-            <div
-              className="product-section-one-first-content-left"
-              id="surface"
-            >
-              <h1>Surface treatment and corrosion protection</h1>
-              <p>
-                Tashe painting process is in accordance to ISO 12944:2008: C3,
-                C4, C5 (L, M, H, VH). DFT can be maintained as per customer
-                requirements suitable for the corrosive environment category.
-              </p>
-              <p>
-                We shot blast every single tank as per Sa 3/Sa 2.5 to ensure
-                absolute surface cleaning and paint adhesion. Different painting
-                schemes can be offered for obtaining optimum corrosion
-                protection.
-              </p>
-
-              <li>
-                surface surface surface surface surface surface Zinc Metallizing
-                or Zinc Rich primers can be used to provide higher corrosion
-                resistance suitable to C5VH environments
-              </li>
-              <li>
-                Epoxy based primers, intermediate or top coats are done using
-                flood painting for equal coats even at the hidden areas
-              </li>
-              <li>Spray painting is also applied for superior finish</li>
-              <li>
-                All jobs are subject to force drying in ovens for faster paint
-                drying and making them ready for further coats
-              </li>
-            </div>
-            <div className="product-section-one-first-content-right">
-              <Image
-                src={"/product-page-img-1.jpeg"}
-                width={0}
-                height={0}
-                unoptimized
-                alt="Loading Image"
-              />
-            </div>
-          </div>
-        </div> */}
-
-        {/* <div className="product-section-one-second">
-          <div className="product-section-one-second-left">
-            <Image
-              src={"/product-page-img2.jpeg"}
-              alt="Loading img"
-              width={0}
-              height={0}
-              unoptimized
-            />
-          </div>
-          <div className="product-section-one-second-right" id="pdi">
-            <h1>Pre-dispatch Inspections (PDI)</h1>
-            <p>
-              At Tashe, 100% tanks go through a stringent PDI with detailed
-              checklists made customised as per every customer. Once passed, the
-              tanks go for packing as per international standards and shipped
-              globally.
-            </p>
-          </div>
-        </div> */}
       </div>
 
       <div className="section-one">
