@@ -152,6 +152,143 @@
   left: 38%;
 }
 
-/* #about-us-footer {
-  padding-top: 28%;
-} */
+@media screen and (max-width: 768px) {
+  .corug-header-text h1 {
+    font-size: 3.3rem;
+    margin-left: 6%;
+    margin-top: 45%;
+  }
+
+  .background-img img {
+    height: 610px;
+  }
+
+  #white-border {
+    margin-top: 64%;
+    margin-left: 39%;
+    position: unset;
+  }
+
+  #orange-border {
+    bottom: unset;
+    margin-top: 58%;
+    width: 145px;
+  }
+
+  .corug-header-text h4 {
+    font-size: 19px;
+    left: 7%;
+  }
+
+  .navbar {
+    padding: 0px 19px;
+    margin-top: -7px;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+    z-index: 1;
+  }
+  .section-two-top-boxes-one-show img {
+    height: 260px;
+  }
+
+  .section-two-top-boxes-one,
+  .section-two-top-boxes-two {
+    margin-top: 5%;
+  }
+
+  #pre,
+  .bim {
+    bottom: 8%;
+    font-size: 19px;
+  }
+
+  .bim::before {
+    content: "";
+    width: 39px;
+    height: 1px;
+    position: absolute;
+    top: -12px;
+  }
+
+  .inspiring-history-header h1 {
+    font-size: 2rem;
+    text-wrap: nowrap;
+  }
+
+  .inspiring-box {
+    flex-direction: column;
+  }
+
+  .inspiring-box-left img {
+    width: 307px;
+    height: auto;
+  }
+
+  .inspiring-box-right {
+    max-width: 100%;
+  }
+
+  #orange-border-two {
+    position: absolute;
+  }
+
+  #inspiring-box-second {
+    flex-direction: column;
+    margin-top: 20%;
+  }
+
+  .inspiring-box-right p {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  #inspiring-box-third .inspiring-box-right {
+    max-width: 100%;
+  }
+
+  .inspiring-box-right h1 {
+    font-size: 23px;
+  }
+
+  #orange-border-two {
+    display: none;
+  }
+
+  #orange-border-four {
+    position: absolute;
+    top: -358%;
+    left: -10%;
+    width: 370px;
+    height: 203px;
+  }
+
+  .inspiring-history {
+    padding-top: 20%;
+  }
+
+  #inspiring-box-third {
+    margin-top: 30%;
+  }
+
+  #orange-border-down {
+    position: absolute;
+    top: 39%;
+    left: 53%;
+    width: 175px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 1200px) {
+  #orange-border-four {
+    display: none;
+  }
+
+  #inspiring-box-third,
+  #inspiring-box-second,
+  #inspiring-box-one {
+    align-items: last baseline;
+  }
+}

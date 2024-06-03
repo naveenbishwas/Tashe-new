@@ -42,8 +42,6 @@ const Page = () => {
     useInView();
   const { ref: processAnimationThirteen, inView: isProcessThirteenVis } =
     useInView();
-  const { ref: processAnimationFourteen, inView: isProcessFourteenVis } =
-    useInView();
 
   return (
     <div className="main-container">
@@ -516,14 +514,6 @@ const Page = () => {
             id="thirteen"
           >
             <h2>hot rolled steel</h2>
-          </div>
-
-          <div
-            ref={processAnimationFourteen}
-            className={`${isProcessFourteenVis ? "steps-fourteen" : "steps"}`}
-            id="fourteen"
-          >
-            <h2>leakage test</h2>
           </div>
         </div>
       </section>

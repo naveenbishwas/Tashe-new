@@ -718,3 +718,224 @@ body {
 .product-section-two-left {
   max-width: 45%;
 }
+
+#thirteen h2 {
+  color: blue;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 768px) {
+  .transformer-heading h1 {
+    font-size: 3.3rem;
+    margin-top: 38%;
+  }
+
+  .transformer-heading p {
+    font-size: 17px;
+    max-width: 90%;
+  }
+
+  #product-banner {
+    height: 600px;
+  }
+
+  .product-section-one-first-content {
+    flex-direction: column-reverse;
+  }
+
+  .product-section-one-second {
+    flex-direction: column;
+  }
+
+  .product-section-one-first-header h1 {
+    font-size: 2rem;
+    margin-top: 10%;
+    letter-spacing: 0;
+  }
+
+  .product-section-one-first-content-right img,
+  .product-section-one-second-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-section-one-first-content-left {
+    margin-top: 10%;
+    max-width: 100%;
+  }
+
+  .product-section-one-first-content-left p {
+    font-size: 15px;
+  }
+
+  .product-section-one {
+    padding: 5% 7%;
+  }
+
+  .process-steps h1 {
+    font-family: "Saira Condensed";
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 22%;
+  }
+
+  .process-steps h2 {
+    font-size: 12px;
+  }
+
+  #first {
+    position: absolute;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-top: 0;
+  }
+
+  #second {
+    position: absolute;
+    margin-top: 3%;
+    left: 21.3%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 58px;
+  }
+
+  #third {
+    position: absolute;
+    left: 38.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 57px;
+    margin-top: 17px;
+  }
+
+  #fourth {
+    padding: 8px;
+    position: absolute;
+    margin-top: 30px;
+    left: 54.1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 61px;
+    height: 58px;
+  }
+
+  #fifth {
+    padding: 8px;
+    position: absolute;
+    margin-top: 23.3%;
+    left: 37%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 63px;
+  }
+
+  #six {
+    padding: 8px;
+    position: absolute;
+    margin-top: 39%;
+    left: 55.6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 33px;
+  }
+
+  #seven {
+    padding: 8px;
+    position: absolute;
+    margin-top: 40%;
+    left: 70.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 63px;
+  }
+
+  #eight {
+    padding: 8px;
+    position: absolute;
+    margin-top: 62%;
+    left: 77.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 45px;
+  }
+
+  #nine {
+    padding: 8px;
+    position: absolute;
+    margin-top: 76.5%;
+    left: 64%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+  }
+
+  #ten {
+    padding: 8px;
+    position: absolute;
+    margin-top: 95.6%;
+    left: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 53px;
+  }
+
+  #eleven {
+    padding: 8px;
+    position: absolute;
+    margin-top: 101%;
+    left: 52.7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 67px;
+    height: 64px;
+  }
+
+  #twelve {
+    padding: 8px;
+    position: absolute;
+    margin-top: 93%;
+    left: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 55px;
+  }
+
+  #thirteen {
+    padding: 8px;
+    position: absolute;
+    margin-top: 91%;
+    left: 10.1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 63px;
+    height: 63px;
+  }
+}
