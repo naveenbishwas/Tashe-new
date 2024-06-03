@@ -986,9 +986,41 @@ footer {
   display: none;
 }
 
+#for-desk {
+  display: none;
+}
+
+#for-mobile {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   #check {
     display: none;
+  }
+
+  #for-desk {
+    display: none;
+  }
+
+  #for-mobile {
+    display: block;
+  }
+
+  #for-mobile summary:first-child {
+    border: 2px solid #f96120;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    padding: 7px 12px 7px 20px;
+  }
+
+  #for-mobile summary {
+    padding: 7px 12px 7px 10px;
+    font-size: 20px;
+    margin-top: 15px;
   }
 
   #navigation ul {

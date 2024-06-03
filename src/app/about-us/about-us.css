@@ -184,11 +184,39 @@
   line-height: 1.4;
 }
 
+#for-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .corug-header-text h1 {
     font-size: 3.3rem;
     margin-left: 6%;
     margin-top: 45%;
+  }
+
+  #for-desk {
+    display: none;
+  }
+
+  #for-mobile {
+    display: block;
+  }
+
+  #for-mobile summary:first-child {
+    border: 2px solid #f96120;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    padding: 7px 12px 7px 20px;
+  }
+
+  #for-mobile summary {
+    padding: 7px 12px 7px 10px;
+    font-size: 20px;
+    margin-top: 15px;
   }
 
   .background-img img {
