@@ -986,12 +986,8 @@ footer {
   display: none;
 }
 
-#for-desk {
-  display: none;
-}
-
 #for-mobile {
-  display: block;
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
