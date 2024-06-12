@@ -188,6 +188,20 @@
   display: none;
 }
 
+.map-section {
+  background-color: #fff;
+}
+
+img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
+  width: 25px;
+}
+
+.leaflet-popup-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .corug-header-text h1 {
     font-size: 3.3rem;
