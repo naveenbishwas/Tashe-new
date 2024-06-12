@@ -104,7 +104,7 @@ export default function Home() {
 
               <li id="contact">
                 <div className="">
-                  <Link id="black" href="#">
+                  <Link id="black" href="/contact-us">
                     Contact us
                   </Link>
                   <svg

@@ -1,0 +1,69 @@
+.footer-right {
+  display: flex;
+  justify-content: center;
+  margin-top: 12%;
+  color: #fff;
+}
+
+.form-top {
+  margin-top: 2%;
+  display: flex;
+  gap: 45px;
+}
+
+.form-top input {
+  width: 216px;
+  margin-top: 30px;
+}
+
+.form-middle textarea {
+  margin-top: 3%;
+}
+
+.footer-right h1 {
+  font-size: 5rem;
+}
+
+body {
+  background-color: #000;
+}
+
+.from-bottom {
+  text-align: center;
+}
+
+.footer-right-header {
+  border: 1px solid;
+  padding: 20px 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-right-header h1 {
+    font-family: "Saira Condensed";
+    font-size: 1.8rem;
+    line-height: 1;
+    letter-spacing: -1px;
+    word-spacing: 0px;
+  }
+
+  .footer-right {
+    margin-top: 22%;
+  }
+
+  .footer-right-header {
+    border: unset;
+    padding: 10px 25px;
+  }
+
+  .form-top input {
+    width: 100%;
+  }
+
+  .form-top {
+    gap: 1px;
+  }
+
+  .form-middle textarea {
+    height: 200px;
+  }
+}
