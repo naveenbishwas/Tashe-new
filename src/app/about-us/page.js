@@ -4,8 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./about-us.css";
-// import { Map } from "leaflet";
-import Map from "../Map";
+// import Map from "../Map";
 
 const page = () => {
   return (
@@ -762,9 +761,9 @@ const page = () => {
         </div>
       </div>
 
-      <div className="map-section">
+      {/* <div className="map-section">
         <Map />
-      </div>
+      </div> */}
 
       <footer id="about-us-footer">
         <div className="footer-df">
