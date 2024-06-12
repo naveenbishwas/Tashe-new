@@ -1,17 +1,23 @@
-.footer-right {
+#contact-right {
   display: flex;
   justify-content: center;
-  margin-top: 12%;
+  margin-top: 7%;
+  padding: 3% 0;
   color: #fff;
 }
 
-.form-top {
+#contact-inputs {
   margin-top: 2%;
   display: flex;
   gap: 45px;
 }
 
-.form-top input {
+#contact-us-nav {
+  margin-top: -2.5%;
+  padding-top: 3%;
+}
+
+#contact-inputs input {
   width: 216px;
   margin-top: 30px;
 }
@@ -20,11 +26,12 @@
   margin-top: 3%;
 }
 
-.footer-right h1 {
+#white-borders h1 {
   font-size: 5rem;
 }
 
-body {
+.contact-us-page,
+#contact-us-nav {
   background-color: #000;
 }
 
@@ -32,7 +39,7 @@ body {
   text-align: center;
 }
 
-.footer-right-header {
+#white-bordern {
   border: 1px solid;
   padding: 20px 60px;
 }
@@ -44,26 +51,31 @@ body {
     line-height: 1;
     letter-spacing: -1px;
     word-spacing: 0px;
+    margin-top: 20px;
   }
 
-  .footer-right {
-    margin-top: 22%;
+  #contact-right {
+    margin-top: 14%;
   }
 
-  .footer-right-header {
+  #white-bordern {
     border: unset;
     padding: 10px 25px;
   }
 
-  .form-top input {
+  #contact-inputs input {
     width: 100%;
   }
 
-  .form-top {
+  #contact-inputs {
     gap: 1px;
   }
 
   .form-middle textarea {
     height: 200px;
+  }
+
+  #contact-us-nav {
+    margin-top: -9.5%;
   }
 }
