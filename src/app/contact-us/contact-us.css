@@ -41,7 +41,7 @@
 
 #white-bordern {
   border: 1px solid;
-  padding: 21px 60px;
+  padding: 20px 60px;
 }
 
 @media screen and (max-width: 768px) {
