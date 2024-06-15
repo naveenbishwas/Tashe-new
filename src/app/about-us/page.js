@@ -4,7 +4,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./about-us.css";
-import Map from "../Map";
+// import Map from "../Map";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("../Map"), { ssr: false });
 
 const page = () => {
   return (

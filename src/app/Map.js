@@ -42,46 +42,45 @@ const position2 = [17.6139, 77.209];
 const Map = () => {
   return (
     <div>
-      {useEffect(() => {
-        <MapContainer
-          style={{ height: "80vh", width: "100%" }}
-          center={position}
-          zoom={3}
-          scrollWheelZoom={false}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={position} icon={icons} id="map-icon">
-            <Popup>
-              <Image
-                src={"/banner3.JPG"}
-                alt="Picture of the background"
-                width={100}
-                height={100}
-                unoptimized
-                priority
-              />
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
+      <MapContainer
+        style={{ height: "80vh", width: "100%" }}
+        center={position}
+        zoom={3}
+        scrollWheelZoom={false}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position} icon={icons} id="map-icon">
+          <Popup>
+            <Image
+              src={"/banner3.JPG"}
+              alt="Picture of the background"
+              width={100}
+              height={100}
+              unoptimized
+              priority
+            />
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
 
-          <Marker position={position2} icon={icons} id="map-icon">
-            <Popup>
-              <Image
-                src={"/banner3.JPG"}
-                alt="Picture of the background"
-                width={100}
-                height={100}
-                unoptimized
-                priority
-              />
-              Naveen
-            </Popup>
-          </Marker>
-        </MapContainer>;
-      }, [])}
+        <Marker position={position2} icon={icons} id="map-icon">
+          <Popup>
+            <Image
+              src={"/banner3.JPG"}
+              alt="Picture of the background"
+              width={100}
+              height={100}
+              unoptimized
+              priority
+            />
+            Naveen
+          </Popup>
+        </Marker>
+      </MapContainer>
+      ;
     </div>
   );
 };
