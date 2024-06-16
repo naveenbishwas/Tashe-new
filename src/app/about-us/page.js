@@ -765,6 +765,9 @@ const page = () => {
       </div>
 
       <div className="map-section">
+        <h1>
+          Customer across the <span id="orange"> World </span>
+        </h1>
         <Map />
       </div>
 
