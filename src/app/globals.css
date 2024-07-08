@@ -937,6 +937,7 @@ footer {
   font-size: 19px;
   padding: 0 0 0 10px;
   outline: none;
+  color: #fff;
 }
 
 .form-middle textarea {
@@ -947,6 +948,7 @@ footer {
   font-size: 19px;
   padding: 10px 0 0 10px;
   outline: none;
+  color: #fff;
 }
 
 .from-bottom button {
