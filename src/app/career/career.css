@@ -1,0 +1,38 @@
+header {
+  width: 100%;
+  position: unset;
+  padding-top: 18px;
+  background-color: #000;
+}
+
+.career-detail-form h1 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.career-detail-form h1 b {
+  font-family: "Saira Condensed";
+  font-size: 30px;
+}
+
+.career-detail-form svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.career-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 12% 0;
+}
+
+.career-detail-form {
+  border: 1px solid orangered;
+  width: 700px;
+  height: auto;
+  padding: 30px;
+}

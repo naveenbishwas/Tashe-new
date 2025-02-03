@@ -37,7 +37,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const icons = L.icon({ iconUrl: "/marker.png" });
 
 const position = [28.6139, 77.209];
-const position2 = [17.6139, 77.209];
+const position2 = [22.6139, 77.209];
 
 const Map = () => {
   return (
@@ -62,7 +62,7 @@ const Map = () => {
               unoptimized
               priority
             />
-            A pretty CSS3 popup. <br /> Easily customizable.
+            New Delhi branch of Devkinandan.
           </Popup>
         </Marker>
 
@@ -76,7 +76,7 @@ const Map = () => {
               unoptimized
               priority
             />
-            Naveen
+            Gujurat branch of Devkinandan.
           </Popup>
         </Marker>
       </MapContainer>

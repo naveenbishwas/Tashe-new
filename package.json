@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "gsap": "^3.12.5",
     "keen-slider": "^6.8.6",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
@@ -17,6 +19,8 @@
     "react-dom": "^18.3.1",
     "react-hook-inview": "^4.5.0",
     "react-intersection-observer": "^9.8.2",
-    "react-leaflet": "^4.2.1"
+    "react-leaflet": "^4.2.1",
+    "split-type": "^0.3.4",
+    "splittext": "^2.0.0"
   }
 }

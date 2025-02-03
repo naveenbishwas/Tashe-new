@@ -1,13 +1,269 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
+import SplitType from "split-type";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 export default function Home() {
+  const textRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isNavbarVisible, setNavbarVisible] = useState(false);
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleNavbar = () => {
+    setNavbarVisible((prev) => !prev); // Toggle visibility
+  };
+
+  const closeNavbar = () => {
+    setNavbarVisible(false); // Close when clicking cancel
+  };
+  const [sliderRef] = useKeenSlider(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 1000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const splitText = new SplitType(textRef.current, {
+      type: "chars",
+    });
+
+    gsap.from(splitText.chars, {
+      opacity: 0,
+      yPercent: 130,
+      duration: 1.2,
+      // stagger: 0.05,
+      ease: "ease",
+    });
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".section-one-top-left", {
+      x: 40,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: ".section-one-top-left",
+        start: "top 60%",
+        end: "top 40%",
+      },
+    });
+
+    gsap.to(".section-one-top-right", {
+      x: -70,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: ".section-one-top-left",
+        start: "top 60%",
+        end: "top 40%",
+      },
+    });
+
+    gsap.to("#section-top-bottom-one", {
+      x: 60,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: "#section-top-bottom-one",
+        start: "top 60%",
+        end: "top 40%",
+      },
+    });
+
+    gsap.to("#section-top-bottom-two", {
+      x: -50,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: "#section-top-bottom-two",
+        start: "top 60%",
+        end: "top 40%",
+      },
+    });
+
+    gsap.to(".section-two-top-boxes-one", {
+      x: 100,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: ".section-two-top-boxes-one",
+        start: "top 60%",
+        end: "top 40%",
+      },
+    });
+
+    gsap.to(".section-two-top-boxes-two", {
+      x: -100,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: ".section-two-top-boxes-two",
+        start: "top 60%",
+        end: "top 40%",
+      },
+    });
+
+    gsap.to(".vision", {
+      x: -110,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: ".vision",
+        start: "top 80%",
+        end: "top 40%",
+      },
+    });
+
+    gsap.to(".mission", {
+      x: 120,
+      duration: 1,
+      ease: "circ",
+      scrollTrigger: {
+        trigger: ".vision",
+        start: "top 80%",
+        end: "top 40%",
+      },
+    });
+
+    if (window.innerWidth <= 768) {
+      gsap.to(".section-one-top-left", {
+        x: 10,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: ".section-one-top-left",
+          start: "top 60%",
+          end: "top 40%",
+        },
+      });
+
+      gsap.to(".section-one-top-right", {
+        x: -20,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: ".section-one-top-left",
+          start: "top 60%",
+          end: "top 40%",
+        },
+      });
+
+      gsap.to(".section-two-top-boxes-one", {
+        x: 35,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: ".section-two-top-boxes-one",
+          start: "top 60%",
+          end: "top 40%",
+        },
+      });
+
+      gsap.to(".section-two-top-boxes-two", {
+        x: -75,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: ".section-two-top-boxes-two",
+          start: "top 60%",
+          end: "top 40%",
+        },
+      });
+
+      gsap.to("#section-top-bottom-one", {
+        x: 25,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: "#section-top-bottom-one",
+          start: "top 60%",
+          end: "top 40%",
+        },
+      });
+
+      gsap.to("#section-top-bottom-two", {
+        x: -47,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: "#section-top-bottom-two",
+          start: "top 60%",
+          end: "top 40%",
+        },
+      });
+
+      gsap.to(".vision", {
+        x: -40,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: ".vision",
+          start: "top 80%",
+          end: "top 40%",
+        },
+      });
+
+      gsap.to(".mission", {
+        x: 20,
+        duration: 1,
+        ease: "circ",
+        scrollTrigger: {
+          trigger: ".vision",
+          start: "top 80%",
+          end: "top 40%",
+        },
+      });
+    }
+  }, []);
+
   return (
     <main className="main-container">
       <div className="back-image">
         <div className="background-img">
           <Image
-            src={"/banner3.JPG"}
+            src={"/Picture7.png"}
             alt="Picture of the background"
             width={0}
             height={0}
@@ -22,7 +278,7 @@ export default function Home() {
           <Link href="/">
             <div className="logo">
               <Image
-                src={"/new-logo.png"}
+                src={"/dev-logo-white.png"}
                 alt="Logo"
                 width={0}
                 height={0}
@@ -32,109 +288,144 @@ export default function Home() {
           </Link>
 
           <nav id="navigation">
-            <input type="checkbox" id="check" />
+            <input
+              type="checkbox"
+              id="check"
+              checked={isNavbarVisible}
+              onChange={toggleNavbar}
+            />
             <label htmlFor="check" className="checkbtn">
               <svg
                 id="nav-icon"
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="20"
+                height="20"
                 fill="currentColor"
-                class="bi bi-list"
+                className="bi bi-list"
                 viewBox="0 0 16 16"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
                 />
               </svg>
             </label>
-            <ul>
+
+            {/* Main Navbar */}
+            <ul
+              className={`main-navbar ${isNavbarVisible ? "open" : "closed"}`}
+            >
+              <span id="cancel_btn" onClick={closeNavbar}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="bi bi-x"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+              </span>
               <li>
                 <Link href="/">Home</Link>
               </li>
-              <li>
-                <div className="dropdown" id="for-desk">
-                  <Link id="product-p" href="/product/transformer">
+              <li
+                className="dropdown"
+                id="for-desk"
+                onMouseEnter={() => setDropdownVisible(true)}
+                onMouseLeave={() => setDropdownVisible(false)}
+              >
+                <Link id="product-p" href="#">
+                  <span id="product-anchor-df">
                     Product
-                  </Link>
-                  <ul id="dropdown-bottm">
-                    <Link href="/product/transformer">
-                      <li>Transformer</li>
-                    </Link>
-                    <Link href="/product/coruggated">
-                      <li>Coruggated</li>
-                    </Link>
-                  </ul>
-                </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-caret-down-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg>
+                  </span>
+                </Link>
 
-                <div className="dropdown" id="for-mobile">
-                  <details>
-                    <summary>
-                      Products
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                        />
-                      </svg>
-                    </summary>
-                    <summary>
-                      <Link href="/product/transformer">Transformer</Link>
-                    </summary>
-                    <summary>
-                      <Link href="/product/coruggated">Coruggated</Link>
-                    </summary>
-                  </details>
-                </div>
+                {isDropdownVisible && (
+                  <ul id="product-li-table">
+                    <li>
+                      <Link href="/product/standard-frame-types">
+                        Standard Frame Types
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/product/peb-frames">PEB Frames</Link>
+                    </li>
+                    <li>
+                      <Link href="/product/insulation">Insulation</Link>
+                    </li>
+                    <li>
+                      <Link href="/product/cranes">Cranes</Link>
+                    </li>
+                    <li>
+                      <Link href="/product/mezzanine">Mezzanine</Link>
+                    </li>
+                    <li>
+                      <Link href="/product/purlin&girt">Purlin & Girt</Link>
+                    </li>
+                    <li>
+                      <Link href="/product/roofing&cladding">
+                        Roofing & Cladding
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/product/technical-details">
+                        Technical Details
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/product/trims&flashing">
+                        Trims & Flashing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/product/ventilation">Ventilation</Link>
+                    </li>
+                  </ul>
+                )}
               </li>
+
               <li>
                 <Link href="/about-us">About us</Link>
               </li>
               <li>
-                <Link href="/">Infrastructure</Link>
+                <Link href="/career">Career</Link>
               </li>
-
               <li id="contact">
                 <div className="">
                   <Link id="black" href="/contact-us">
                     Contact us
                   </Link>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-arrow-up-right"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                    />
-                  </svg>
                 </div>
               </li>
             </ul>
           </nav>
         </div>
+
         <div className="header-lin">
           <hr id="header-line" />
         </div>
         <div className="header-text">
-          <h1>Tashe Power India</h1>
+          <h1 ref={textRef}>
+            DEVKINANDAN STEEL & METAL <br /> INDUSTRIES LLP
+          </h1>
           <p>
-            We are one of the first companies in india to manufacture
-            <span id="orange"> Corrugated Tanks and Fin walls </span>and have
-            been serving in india and across the globe to various transformer
-            OEMs.
+            we are pioneers in the steel and metal industry, committed to
+            delivering top-quality products and unmatched service. With years of
+            expertise and a reputation for excellence, we are your trusted
+            partner for all <span id="orange">steel</span> and{" "}
+            <span id="orange">metals</span> needs
           </p>
           <Link href="/about-us">
             <button>Know More</button>
@@ -153,14 +444,15 @@ export default function Home() {
         <div className="section-one-df">
           <div className="section-one-top">
             <div className="section-one-top-left">
-              <h1>Transform THE FUTURE</h1>
+              <h1>BUILD TOMORROW'S DREAMS TODAY</h1>
             </div>
             <div className="section-one-top-right">
               <p>
-                We, at Tashe , are customer-centric in our focus and believe in
-                maintaining a long-term relationship with our customers. With
-                the knowledge and experience of our people, we are able to
-                deliver quality products efficiently and cost-effectively
+                At DEVKINANDAN STEEL & METAL INDUSTRIES LLP, we believe in
+                shaping a future that’s stronger, more resilient, and built to
+                last. With our premium steel and metal solutions, you’re not
+                just constructing projects—you’re building dreams that stand the
+                test of time.
               </p>
               <Link href="/infrastructure">
                 <button>Why we are different</button>
@@ -169,7 +461,16 @@ export default function Home() {
           </div>
           <div className="section-top-bottom">
             <Image
-              src={"/banner4.JPG"}
+              id="section-top-bottom-one"
+              src={"/factory-image2.JPEG"}
+              alt="About-us Image"
+              width={0}
+              height={0}
+              unoptimized
+            />
+            <Image
+              id="section-top-bottom-two"
+              src={"/factory-image6.JPEG"}
               alt="About-us Image"
               width={0}
               height={0}
@@ -185,7 +486,6 @@ export default function Home() {
 	C-3.6,70.7,1,80.4,9.3,80.4h115h706.4h115C953.9,80.4,958.5,70.7,953.2,64.3z"
         />
       </svg>
-
       <div className="section-two">
         <div className="builder-img">
           <svg id="builder" version="1.1" viewBox="0 0 367 704">
@@ -337,240 +637,63 @@ export default function Home() {
 
         <div className="section-two-df">
           <div className="section-two-top">
-            <h1>What we do</h1>
+            <h1>Management</h1>
             <div className="section-two-top-boxes">
-              <div className="section-two-top-boxes-one">
-                <div className="section-two-top-boxes-one-background"></div>
-                <div className="section-two-top-boxes-one-show">
-                  <Image
-                    src={"/tank.JPG"}
-                    alt="bim-image"
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
-                  <h3 class="bim">Corrugated Tanks</h3>
+              <div className="section-two-top-boxes-one-hide">
+                <div className="section-two-top-boxes-one-hide-top">
+                  <h3>Mrs Karan Goel- Director</h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-up-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                    />
+                  </svg>
                 </div>
-                <div className="section-two-top-boxes-one-hide">
-                  <div className="section-two-top-boxes-one-hide-top">
-                    <h3>Corrugated Tanks</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div className="section-two-top-boxes-one-hide-bottom">
-                    <p>
-                      Corrugations are provided with embossed channels and spot
-                      welds for greater stability and effective heat
-                      dissipation.
-                    </p>
-                  </div>
+                <div className="section-two-top-boxes-one-hide-bottom">
+                  <p>
+                    Mr. karan Goel is young and dynamic person with post
+                    Graduation MBA(Finance & Marketing) with total 8 yers
+                    professional experience in steel industry.
+                  </p>
                 </div>
               </div>
 
-              <div className="section-two-top-boxes-two">
-                <div className="section-two-top-boxes-one-background-two"></div>
-                <div className="section-two-top-boxes-one-show">
-                  <Image
-                    src="/tank2.JPG"
-                    alt="bim-image"
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
-                  <h3 class="bim" id="pre">
-                    Corrugated Finwalls for Transformers
-                  </h3>
+              <div className="section-two-top-boxes-one-hide">
+                <div className="section-two-top-boxes-one-hide-top">
+                  <h3 id="pre-con"> Mr. Vaibhav Kulshreshtha - Director</h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-up-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                    />
+                  </svg>
                 </div>
-                <div className="section-two-top-boxes-one-hide">
-                  <div className="section-two-top-boxes-one-hide-top">
-                    <h3 id="pre-con">Corrugated Finwalls for Transformers</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div className="section-two-top-boxes-one-hide-bottom">
-                    <p id="coruggated">
-                      Our corrugated fins are passed for Fatigue Test as per
-                      SANS 780:2009 at 11,000 cycles, which is equivalent to 30
-                      years of transformer life.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-two-top-boxes-two">
-                <div className="section-two-top-boxes-one-background-two"></div>
-                <div className="section-two-top-boxes-one-show">
-                  <Image
-                    src="/transform.JPG"
-                    alt="bim-image"
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
-                  <h3 class="bim" id="pre">
-                    Transformer Tanks
-                  </h3>
-                </div>
-                <div className="section-two-top-boxes-one-hide">
-                  <div className="section-two-top-boxes-one-hide-top">
-                    <h3> Transformer Tanks</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div className="section-two-top-boxes-one-hide-bottom">
-                    <p id="shop-fab">
-                      We manufacture tanks ranging from 100KVA to 15MVA. Our
-                      tanks stand out due to their manufacturing quality and
-                      amazing aesthetical finish
-                    </p>
-                  </div>
+                <div className="section-two-top-boxes-one-hide-bottom">
+                  <p id="coruggated">
+                    Mr. Vaibhav Kulshreshtha is young professional with Diploma
+                    Mechanical Engineering. He is having 8 year exprience in PEB
+                    industry
+                  </p>
                 </div>
               </div>
             </div>
-
-            {/* <div className="section-two-bottom-boxes">
-              <div className="section-two-top-boxes-two">
-                <div className="section-two-top-boxes-one-background-two"></div>
-                <div className="section-two-top-boxes-one-show">
-                  <Image
-                    src="/rod.jpeg"
-                    alt="bim-image"
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
-                  <h3 class="bim" id="pre">
-                    Field Installation
-                  </h3>
-                </div>
-                <div className="section-two-top-boxes-one-hide">
-                  <div className="section-two-top-boxes-one-hide-top">
-                    <h3>Field Installation</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div className="section-two-top-boxes-one-hide-bottom">
-                    <p id="field">
-                      With an aptitude for architectural designs, non-standard
-                      metals, gravity-defying structures, 20-ton radiation
-                      shields and 10 story marquee signs, Tashe transcends new
-                      heights in the industry. Tashe’s field crews are highly
-                      qualified from Ironworkers Local 377 with years of
-                      experience and extensive training. Our field crews
-                      prioritize safety and quality craftsmanship.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="section-two-top-boxes-two">
-                <div className="section-two-top-boxes-one-background-two"></div>
-                <div className="section-two-top-boxes-one-show">
-                  <Image
-                    src="/detail.jpeg"
-                    alt="bim-image"
-                    width={0}
-                    height={0}
-                    unoptimized
-                    style={{ width: "490px", height: "300px" }}
-                  />
-                  <h3 class="bim" id="pre">
-                    Advance Detailing
-                  </h3>
-                </div>
-                <div className="section-two-top-boxes-one-hide">
-                  <div className="section-two-top-boxes-one-hide-top">
-                    <h3>Advance Detailing</h3>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                      />
-                    </svg>
-                  </div>
-                  <div className="section-two-top-boxes-one-hide-bottom">
-                    <p id="utilize">
-                      Utilizing in-house detailing and BIM Coordination, we
-                      avoid the pitfalls of outsourcing. Our mechanical
-                      engineers are proficient in BIM coordination software,
-                      allowing us to stay on schedule. Tekla Structures is a
-                      powerful modeling platform that allows us to significantly
-                      reduce the time needed to produce models and shop
-                      drawings. Our advanced surveying capability also enables
-                      us to efficiently transfer layouts from the computer to
-                      the jobsite.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-          </div>
-
-          <div className="section-two-bottom">
-            <p>
-              We, at Tashe, are customer-centric in our focus and believe in
-              maintaining a long-term relationship with our customers. With the
-              knowledge and experience of our people, we are able to deliver
-              quality products efficiently and cost-effectively
-            </p>
-            <span>
-              <button>Contact us Today</button>
-            </span>
           </div>
         </div>
       </div>
-
       <div className="section-three">
         <hr class="section-three-line" />
 
@@ -582,7 +705,7 @@ export default function Home() {
             <div className="section-three-bottom-logo-one">
               <div className="">
                 <Image
-                  src={"/alfanar.png"}
+                  src={"/Picture1.png"}
                   width={0}
                   height={0}
                   alt="alfanar"
@@ -592,7 +715,7 @@ export default function Home() {
               </div>
               <div className="">
                 <Image
-                  src="/ardan.png"
+                  src="/Picture2.png"
                   alt="ardan"
                   width={0}
                   height={0}
@@ -602,7 +725,7 @@ export default function Home() {
               </div>
               <div className="">
                 <Image
-                  src="/danish.jpeg"
+                  src="/Picture3.png"
                   alt="danish"
                   width={0}
                   height={0}
@@ -612,139 +735,19 @@ export default function Home() {
               </div>
               <div className="">
                 <Image
-                  src="/ETS.webp"
+                  src="/Picture4.png"
                   alt="ets"
                   width={0}
                   height={0}
                   unoptimized
                   style={{ width: "120px", height: "auto" }}
-                />
-              </div>
-              <div className="">
-                <Image
-                  src={"/euro.png"}
-                  alt="euro"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "200px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/federal.jpeg"}
-                  alt="federal"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "180px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/memf.webp"}
-                  alt="memf"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/sec.png"}
-                  alt="sec"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "90px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/euro.png"}
-                  alt="euro"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/shenda.png"}
-                  alt="shenda"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/shilcar.png"}
-                  alt="shilcar"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/sptc.png"}
-                  alt="sptc"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/sudhir.png"}
-                  alt="sudhir"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/tyree.jpeg"}
-                  alt="tyree"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/volta-logo.png"}
-                  alt="volta"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "80px", height: "auto" }}
                 />
               </div>
             </div>
             <div className="section-three-bottom-logo-two">
               <div className="">
                 <Image
-                  src={"/alfanar.png"}
+                  src={"/Picture1.png"}
                   width={0}
                   height={0}
                   alt="alfanar"
@@ -754,7 +757,7 @@ export default function Home() {
               </div>
               <div className="">
                 <Image
-                  src="/ardan.png"
+                  src="/Picture2.png"
                   alt="ardan"
                   width={0}
                   height={0}
@@ -764,7 +767,7 @@ export default function Home() {
               </div>
               <div className="">
                 <Image
-                  src="/danish.jpeg"
+                  src="/Picture3.png"
                   alt="danish"
                   width={0}
                   height={0}
@@ -774,132 +777,12 @@ export default function Home() {
               </div>
               <div className="">
                 <Image
-                  src="/ETS.webp"
+                  src="/Picture4.png"
                   alt="ets"
                   width={0}
                   height={0}
                   unoptimized
                   style={{ width: "120px", height: "auto" }}
-                />
-              </div>
-              <div className="">
-                <Image
-                  src={"/euro.png"}
-                  alt="euro"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "200px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/federal.jpeg"}
-                  alt="federal"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "180px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/memf.webp"}
-                  alt="memf"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/sec.png"}
-                  alt="sec"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "90px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/euro.png"}
-                  alt="euro"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/shenda.png"}
-                  alt="shenda"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/shilcar.png"}
-                  alt="shilcar"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/sptc.png"}
-                  alt="sptc"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/sudhir.png"}
-                  alt="sudhir"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/tyree.jpeg"}
-                  alt="tyree"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "110px", height: "auto" }}
-                />
-              </div>
-
-              <div className="">
-                <Image
-                  src={"/volta-logo.png"}
-                  alt="volta"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "80px", height: "auto" }}
                 />
               </div>
             </div>
@@ -907,7 +790,38 @@ export default function Home() {
         </div>
         <hr class="section-three-line" />
       </div>
+      <div className="vision-mission">
+        <h1>Vision & Mission</h1>
+        <div className="vision">
+          <h2>Our Vision</h2>
+          <p>
+            Our vision is to be the industry leader in providing innovative,
+            durable, and cost-effective pre-engineered building solutions that
+            meet the evolving needs of our clients. We strive to deliver
+            high-quality structures that combine efficiency, sustainability, and
+            design flexibility, ensuring that every project is completed on time
+            and within budget. By leveraging cutting-edge technology,
+            sustainable practices, and a customer-focused approach, we aim to
+            reshape the construction landscape and become the preferred partner
+            for businesses and industries worldwide, contributing to the growth
+            and success of our communities.
+          </p>
+        </div>
 
+        <div className="mission">
+          <h2>Our Mission</h2>
+          <p>
+            Devkinandan Steel & Metal Industries LLP will consistently be the
+            preferred partner of steel building users, their consultants and
+            contractors. We give value for money by prompt delivery of high
+            quality buildings, supported by accurate engineering designs through
+            our investments in people, technology and manufacturing capacity.
+            Profitable growth and our passion for innovation let us continue to
+            offer rewarding careers to our employees and continuously provide
+            excellent service to our customers.
+          </p>
+        </div>
+      </div>
       <div className="section-four">
         <div className="section-four-df">
           <div className="section-four-header">
@@ -993,347 +907,145 @@ export default function Home() {
             </div>
           </div>
           <hr id="sc-four-line" />
-
-          {/* <div className="section-four-box-one">
-            <div className="section-four-box-one-left">
-              <div className="section-four-box-one-left-image">
-                <Image
-                  src="/sf-box3.jpeg"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </div>
-              <div className="section-four-box-one-left-text">
-                <Image
-                  src="/planet.png"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{
-                    width: "100px",
-                    height: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h1>Stanford University, Stanford, CA</h1>
-                <p>
-                  Tashe has worked with Stanford University in California on a
-                  multitude of projects. These projects include structural
-                  coruggated, complicated hip and valley roof structure, and
-                  Christmas treeing for Crothers Dining Hall. Seismic upgrades
-                  were made in the Peterson Building as well as Structural
-                  coruggated infill in a concrete tilt up building for the
-                  Aquatics Center. Additional services include stairs and
-                  railings, ornamental ironwork, and more.
-                </p>
-              </div>
-            </div>
-            <div className="section-four-box-one-right">
-              <h1>03</h1>
-            </div>
-          </div>
-          <hr id="sc-four-line" />
-
-          <div className="section-four-box-one">
-            <div className="section-four-box-one-left">
-              <div className="section-four-box-one-left-image">
-                <Image
-                  src="/medical.jpeg"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </div>
-              <div className="section-four-box-one-left-text">
-                <Image
-                  src="/palo.gif"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{
-                    width: "100px",
-                    height: "50px",
-                    objectFit: "cover",
-                  }}
-                />
-                <h1>Stanford University, Stanford, CA</h1>
-                <p>
-                  Tashe has worked with Stanford University in California on a
-                  multitude of projects. These projects include structural
-                  coruggated, complicated hip and valley roof structure, and
-                  Christmas treeing for Crothers Dining Hall. Seismic upgrades
-                  were made in the Peterson Building as well as Structural
-                  coruggated infill in a concrete tilt up building for the
-                  Aquatics Center. Additional services include stairs and
-                  railings, ornamental ironwork, and more.
-                </p>
-              </div>
-            </div>
-            <div className="section-four-box-one-right">
-              <h1>04</h1>
-            </div>
-          </div>
-          <hr id="sc-four-line" /> */}
         </div>
       </div>
-
-      <div className="section-five">
-        <div className="section-five-df">
-          <div className="section-five-left">
-            <h1>
-              CLIENTS <span id="and">&</span> TESTIMONIALS
-            </h1>
-            <div className="section-five-left-text">
-              <p id="over-150">
-                Over 150 projects completed with Novo as a trusted partner.
-              </p>
-            </div>
-          </div>
-          <div className="section-five-right">
-            <div className="section-five-right-one">
-              <div className="section-five-right-one-left">
-                <div className="">
-                  <Image
-                    src={"/alfanar.png"}
-                    alt="alfanar"
-                    width={0}
-                    height={0}
-                    unoptimized
-                    style={{ width: "100px", height: "auto" }}
-                  ></Image>
-                </div>
-              </div>
-              <div className="section-five-right-one-right">
-                <h4>
-                  alfanar is primarily engaged in manufacturing a wide range of
-                  Low, Medium and High Voltage electrical construction
-                  products...
-                </h4>
-                {/* <h6>
-                  <span id="bold">Novo |</span> 150 Projects
-                </h6> */}
-              </div>
-            </div>
-            <hr className="section-five-line" />
-
-            <div id="five-two" className="section-five-right-one">
-              <div className="section-five-right-one-left">
-                <div className="">
-                  <Image
-                    src="/ardan.png"
-                    alt="ardan"
-                    width={0}
-                    height={0}
-                    unoptimized
-                    style={{ width: "70px", height: "auto" }}
-                  />
-                </div>
-              </div>
-              <div className="section-five-right-one-right">
-                <h4>
-                  Ardan design, manufacture and service oil immersed
-                  distribution and small power transformers up to 15,000KVA and
-                  36KV both...
-                </h4>
-                {/* <h6>
-                  <span id="bold">Novo |</span> 150 Projects
-                </h6> */}
-              </div>
-            </div>
-            <hr className="section-five-line" />
-
-            <div className="section-five-right-one">
-              <div className="section-five-right-one-left">
-                <div className="">
-                  <Image
-                    src="/danish.jpeg"
-                    alt="danish"
-                    width={0}
-                    height={0}
-                    unoptimized
-                    style={{ width: "70px", height: "auto" }}
-                  />
-                </div>
-              </div>
-              <div className="section-five-right-one-right">
-                <h4>
-                  Danish takes pride in being recognized as one of the leading
-                  quality conscious power equipment manufacturers...
-                </h4>
-                {/* <h6>
-                  <span id="bold">Novo |</span> 150 Projects
-                </h6> */}
-              </div>
-            </div>
-            <hr className="section-five-line" />
-
-            <div className="section-five-right-one">
-              <div className="section-five-right-one-left">
-                <div className="">
-                  <Image
-                    src="/ETS.webp"
-                    alt="danish"
-                    width={0}
-                    height={0}
-                    unoptimized
-                    style={{ width: "70px", height: "auto" }}
-                  />
-                </div>
-              </div>
-              <div className="section-five-right-one-right">
-                <h4>
-                  ETS, the supplier of choice to major electrical/water...
-                </h4>
-                {/* <h6>
-                  <span id="bold">Novo |</spnan> 150 Projects
-                </h6> */}
-              </div>
-            </div>
-            <hr className="section-five-line" />
-          </div>
-        </div>
-      </div>
-
-      {/* <div className="section-six">
-        <div className="section-six-header">
-          <h1>OUR ACHIEVEMENTS</h1>
+      <div className="factory-unit">
+        <div className="factory-unit-heading">
+          <h1>Factory Unit</h1>
           <p>
-            We assign each project a mechanical engineer to field-measure,
-            detail, and supervise fabrication and installation. We provide an
-            unsurpassed level of care and precision. Choose Tashe Power India
-            Works as your partner, and we will make you look great. As evidence,
-            we present the following achievements.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta id,
+            illum ipsum beatae consequuntur sequi et adipisci totam ex similique
+            atque, voluptates repellat delectus quis magni dicta odit debitis
+            commodi?
           </p>
         </div>
-
-        <div className="section-six-content">
-          <div className="section-six-content-box-1">
-            <div className="section-six-content-box-1-image">
-              <Image
-                src="box1.jpeg"
-                alt="box-1 Image"
-                width={0}
-                height={0}
-                unoptimized
-              />
+        <div className="navigation-wrapper">
+          <div ref={sliderRef} className="keen-slider">
+            <div className="keen-slider__slide number-slide1">
+              <div className="unit-right-part">
+                <Image
+                  src="Untitled-design.png"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
-            <div className="section-six-content-box-1-text">
-              <h3>Clients</h3>
-              <p>
-                Tashe Power India Works is one of the top design/build
-                miscellaneous metals companies in Northern California,
-                pre-qualified with 90% of the largest commercial contractors in
-                Silicon Valley (a growing list).
-              </p>
+            <div className="keen-slider__slide number-slide2">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image10.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
-          </div>
-
-          <div className="section-six-content-box-1">
-            <div className="section-six-content-box-1-image">
-              <Image
-                src="box2.jpeg"
-                alt="box-1 Image"
-                width={0}
-                height={0}
-                unoptimized
-              />
+            <div className="keen-slider__slide number-slide3">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image11.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
-            <div className="section-six-content-box-1-text">
-              <h3>Clients</h3>
-              <p>
-                Tashe Power India Works is one of the top design/build
-                miscellaneous metals companies in Northern California,
-                pre-qualified with 90% of the largest commercial contractors in
-                Silicon Valley (a growing list).
-              </p>
+            <div className="keen-slider__slide number-slide4">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image12.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
-          </div>
-
-          <div className="section-six-content-box-1">
-            <div className="section-six-content-box-1-image">
-              <Image
-                src="box3.jpeg"
-                alt="box-1 Image"
-                width={0}
-                height={0}
-                unoptimized
-              />
+            <div className="keen-slider__slide number-slide5">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image13.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
-            <div className="section-six-content-box-1-text">
-              <h3>Clients</h3>
-              <p>
-                Tashe Power India Works is one of the top design/build
-                miscellaneous metals companies in Northern California,
-                pre-qualified with 90% of the largest commercial contractors in
-                Silicon Valley (a growing list).
-              </p>
+            <div className="keen-slider__slide number-slide6">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image14.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
-          </div>
-
-          <div className="section-six-content-box-1">
-            <div className="section-six-content-box-1-image">
-              <Image
-                src="box4.jpeg"
-                alt="box-1 Image"
-                width={0}
-                height={0}
-                unoptimized
-              />
+            <div className="keen-slider__slide number-slide7">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image15.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
-            <div className="section-six-content-box-1-text">
-              <h3>Clients</h3>
-              <p>
-                Tashe Power India Works is one of the top design/build
-                miscellaneous metals companies in Northern California,
-                pre-qualified with 90% of the largest commercial contractors in
-                Silicon Valley (a growing list).
-              </p>
+            <div className="keen-slider__slide number-slide8">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image16.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide9">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image17.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide10">
+              <div className="unit-right-part">
+                <Image
+                  src="Factory-image18.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                ></Image>
+              </div>
             </div>
           </div>
         </div>
-      </div> */}
-
+      </div>
       <footer>
         <div className="footer-df">
           <div className="footer-left">
             <div className="footer-left-top">
-              <h2>TASHE POWER INDIA</h2>
+              <h2>DEVKINANDAN STEEL & METAL INDUSTRIES LLP</h2>
               <p>
                 A great place to work where people are inspired, involved and
                 motivated.
               </p>
               <hr id="footer-line" />
             </div>
-            <div className="footer-left-middle">
-              <div className="footer-left-middle-left">
-                <li id="fir">
-                  <a href="#">Who we are</a>
-                </li>
-                <li>
-                  <a href="#">Corrugated Fabrications</a>
-                </li>
-                <li>
-                  <a href="#">Our Work</a>
-                </li>
-              </div>
-
-              <div className="footer-left-middle-right">
-                <li id="first-pro">
-                  <a href="#">Testimonials</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li>
-              </div>
-            </div>
+            <div className="footer-left-middle"></div>
             <div className="footer-left-last">
               <div className="footer-left-last-call-mail">
                 <div className="footer-left-last-call-mail-1">
@@ -1350,7 +1062,7 @@ export default function Home() {
                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
                     />
                   </svg>
-                  <h5>+919711718600</h5>
+                  <h5>+91 8758809966</h5>
                 </div>
                 <div className="footer-left-last-call-mail-2">
                   <svg
@@ -1363,7 +1075,7 @@ export default function Home() {
                   >
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
                   </svg>
-                  <h5>info@tashe.co.in</h5>
+                  <h5>info@devkinandansteel.com</h5>
                 </div>
               </div>
 
@@ -1380,12 +1092,12 @@ export default function Home() {
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                   </svg>
                   <h6>
-                    Unit 1: F-194, Khushkhera Industrial Area, Bhiwadi, District
-                    Alwar, Rajasthan 301019 (India)
+                    Survey no 786, near PCBL, Village-Vadal, Mundra - kutch,
+                    Gujurat.
                   </h6>
                 </div>
 
-                <div className="footer-left-last-address-2">
+                {/* <div className="footer-left-last-address-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -1400,24 +1112,7 @@ export default function Home() {
                     Unit 2: G1/172, Khushkhera Industrial Area, Bhiwadi,
                     District Alwar, Rajasthan 301019 (India)
                   </h6>
-                </div>
-
-                <div className="footer-left-last-address-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-geo-alt-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                  </svg>
-                  <h6>
-                    Unit 3: F-73, Karoli Industrial Area, Bhiwadi, District
-                    Alwar, Rajasthan 301019 (India)
-                  </h6>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
