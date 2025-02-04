@@ -11,7 +11,7 @@ import "keen-slider/keen-slider.min.css";
 
 export default function Home() {
   const textRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -123,28 +123,6 @@ export default function Home() {
       },
     });
 
-    gsap.to(".section-two-top-boxes-one", {
-      x: 100,
-      duration: 1,
-      ease: "circ",
-      scrollTrigger: {
-        trigger: ".section-two-top-boxes-one",
-        start: "top 60%",
-        end: "top 40%",
-      },
-    });
-
-    gsap.to(".section-two-top-boxes-two", {
-      x: -100,
-      duration: 1,
-      ease: "circ",
-      scrollTrigger: {
-        trigger: ".section-two-top-boxes-two",
-        start: "top 60%",
-        end: "top 40%",
-      },
-    });
-
     gsap.to(".vision", {
       x: -110,
       duration: 1,
@@ -185,28 +163,6 @@ export default function Home() {
         ease: "circ",
         scrollTrigger: {
           trigger: ".section-one-top-left",
-          start: "top 60%",
-          end: "top 40%",
-        },
-      });
-
-      gsap.to(".section-two-top-boxes-one", {
-        x: 35,
-        duration: 1,
-        ease: "circ",
-        scrollTrigger: {
-          trigger: ".section-two-top-boxes-one",
-          start: "top 60%",
-          end: "top 40%",
-        },
-      });
-
-      gsap.to(".section-two-top-boxes-two", {
-        x: -75,
-        duration: 1,
-        ease: "circ",
-        scrollTrigger: {
-          trigger: ".section-two-top-boxes-two",
           start: "top 60%",
           end: "top 40%",
         },
@@ -283,6 +239,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 unoptimized
+                priority
               />
             </div>
           </Link>
