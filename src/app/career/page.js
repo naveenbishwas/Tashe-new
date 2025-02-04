@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import "keen-slider/keen-slider.min.css";
 import "./career.css";
+import { useState } from "react";
 
-export default function Home() {
+const page = () => {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -260,23 +261,6 @@ export default function Home() {
                     Gujurat.
                   </h6>
                 </div>
-
-                {/* <div className="footer-left-last-address-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-geo-alt-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                  </svg>
-                  <h6>
-                    Unit 2: G1/172, Khushkhera Industrial Area, Bhiwadi,
-                    District Alwar, Rajasthan 301019 (India)
-                  </h6>
-                </div> */}
               </div>
             </div>
           </div>
@@ -308,4 +292,5 @@ export default function Home() {
       </footer>
     </main>
   );
-}
+};
+export default page;

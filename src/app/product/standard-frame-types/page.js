@@ -8,12 +8,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 
-const Page = () => {
+const page = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isNavbarVisible, setNavbarVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const toggleNavbar = () => {
     setNavbarVisible((prev) => !prev); // Toggle visibility
@@ -618,4 +617,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default page;
