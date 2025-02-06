@@ -288,4 +288,8 @@ body {
     max-width: 90%;
     font-size: 17px;
   }
+
+  .background-img img {
+    width: 600px !important;
+  }
 }

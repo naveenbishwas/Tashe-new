@@ -9,18 +9,34 @@ import SplitType from "split-type";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".scroll-fade");
+
+  function checkScroll() {
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.9) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll();
+});
+
 export default function Home() {
   const textRef = useRef(null);
-  // const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleNavbar = () => {
-    setNavbarVisible((prev) => !prev); // Toggle visibility
+    setNavbarVisible((prev) => !prev);
   };
 
   const closeNavbar = () => {
-    setNavbarVisible(false); // Close when clicking cancel
+    setNavbarVisible(false);
   };
   const [sliderRef] = useKeenSlider(
     {
@@ -73,7 +89,6 @@ export default function Home() {
       opacity: 0,
       yPercent: 130,
       duration: 1.2,
-      // stagger: 0.05,
       ease: "ease",
     });
 
@@ -216,7 +231,7 @@ export default function Home() {
 
   return (
     <main className="main-container">
-      <div className="back-image">
+      <div className="back-image parallax">
         <div className="background-img">
           <Image
             src={"/Picture7.png"}
@@ -356,7 +371,7 @@ export default function Home() {
               <li>
                 <Link href="/about-us">About us</Link>
               </li>
-              <li>
+              <li id="career">
                 <Link href="/career">Career</Link>
               </li>
               <li id="contact">
@@ -419,7 +434,7 @@ export default function Home() {
           <div className="section-top-bottom">
             <Image
               id="section-top-bottom-one"
-              src={"/factory-image2.JPEG"}
+              src={"/Factory-image2.JPEG"}
               alt="About-us Image"
               width={0}
               height={0}
@@ -427,7 +442,7 @@ export default function Home() {
             />
             <Image
               id="section-top-bottom-two"
-              src={"/factory-image6.JPEG"}
+              src={"/Factory-image6.JPEG"}
               alt="About-us Image"
               width={0}
               height={0}
@@ -870,10 +885,14 @@ export default function Home() {
         <div className="factory-unit-heading">
           <h1>Factory Unit</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta id,
-            illum ipsum beatae consequuntur sequi et adipisci totam ex similique
-            atque, voluptates repellat delectus quis magni dicta odit debitis
-            commodi?
+            Our factory unit is built on precision, efficiency, and innovation,
+            ensuring top-quality production at every stage. With a commitment to
+            sustainability, we integrate advanced manufacturing techniques to
+            optimize performance while reducing environmental impact. Every
+            product reflects our dedication to craftsmanship, reliability, and
+            industry-leading standards. By continuously evolving, we power
+            industries with excellence, meeting the demands of a dynamic and
+            competitive market
           </p>
         </div>
         <div className="navigation-wrapper">
