@@ -674,7 +674,6 @@ header {
 }
 
 .section-four-box-one:hover .section-four-box-one-left-image img {
-  animation: unset;
   width: 100%;
   height: auto;
 }
