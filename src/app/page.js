@@ -231,7 +231,7 @@ export default function Home() {
 
   return (
     <main className="main-container">
-      <div className="back-image parallax">
+      <div className="back-image">
         <div className="background-img">
           <Image
             src={"/Picture7.png"}
