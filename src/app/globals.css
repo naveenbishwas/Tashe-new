@@ -316,7 +316,7 @@ header {
 }
 
 #Layer_2 path {
-  fill: #f9f9ff;
+  fill: #fff;
 }
 
 #Layer_2 {
@@ -347,7 +347,7 @@ header {
 }
 
 .section-two-top-boxes-one-hide {
-  background: #ffefe0; /* Light orange background */
+  background: #000; /* Light orange background */
   border-radius: 12px;
   padding: 20px;
   width: 48%;
@@ -370,12 +370,12 @@ header {
 .section-two-top-boxes-one-hide-top h3 {
   font-size: 20px;
   font-weight: bold;
-  color: #d35400; /* Darker orange for better readability */
+  color: #fff; /* Darker orange for better readability */
 }
 
 .section-two-top-boxes-one-hide-bottom p {
   font-size: 16px;
-  color: #994c00; /* Warm brown-orange for better contrast */
+  color: #cfcfcf; /* Warm brown-orange for better contrast */
   line-height: 1.5;
   margin-top: 5%;
 }

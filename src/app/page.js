@@ -623,7 +623,7 @@ export default function Home() {
 
               <div className="section-two-top-boxes-one-hide">
                 <div className="section-two-top-boxes-one-hide-top">
-                  <h3 id="pre-con"> Mr. Vaibhav Kulshreshtha - Director</h3>
+                  <h3 id="pre-con"> Mr. Vaibhav - Director</h3>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
