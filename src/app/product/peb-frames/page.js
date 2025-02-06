@@ -258,7 +258,7 @@ const Page = () => {
         viewBox="0 0 956 80.7"
       >
         <path
-          class="st0"
+          className="st0"
           d="M953.2,64.3L902.5,3.5C900.7,1.3,897.9,0,895,0h-64.3H124.2H59.9c-2.9,0-5.7,1.3-7.5,3.5L1.7,64.3
 	C-3.6,70.7,1,80.4,9.3,80.4h115h706.4h115C953.9,80.4,958.5,70.7,953.2,64.3z"
         />
@@ -518,7 +518,7 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-telephone-fill"
+                    className="bi bi-telephone-fill"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -534,7 +534,7 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-envelope-fill"
+                    className="bi bi-envelope-fill"
                     viewBox="0 0 16 16"
                   >
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
@@ -550,7 +550,7 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-geo-alt-fill"
+                    className="bi bi-geo-alt-fill"
                     viewBox="0 0 16 16"
                   >
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />

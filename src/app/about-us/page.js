@@ -183,7 +183,7 @@ const page = () => {
           <h1>About us</h1>
           <svg version="1.1" id="orange-border" viewBox="0 0 514 137">
             <path
-              class="st0"
+              className="st0"
               d="M-93.5,1.4h457c5.1,0,10,1.9,13.7,5.4L514,135.7"
             />
           </svg>
@@ -196,7 +196,7 @@ const page = () => {
             viewBox="0 0 956 80.7"
           >
             <path
-              class="st0"
+              className="st0"
               d="M953.2,64.3L902.5,3.5C900.7,1.3,897.9,0,895,0h-64.3H124.2H59.9c-2.9,0-5.7,1.3-7.5,3.5L1.7,64.3  C-3.6,70.7,1,80.4,9.3,80.4h115h706.4h115C953.9,80.4,958.5,70.7,953.2,64.3z"
             ></path>
           </svg>
@@ -257,7 +257,7 @@ const page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-telephone-fill"
+                    className="bi bi-telephone-fill"
                     viewBox="0 0 16 16"
                   >
                     <path

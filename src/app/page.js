@@ -9,25 +9,9 @@ import SplitType from "split-type";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".scroll-fade");
-
-  function checkScroll() {
-    elements.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.9) {
-        el.classList.add("visible");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", checkScroll);
-  checkScroll();
-});
-
 export default function Home() {
   const textRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
