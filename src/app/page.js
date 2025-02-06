@@ -418,7 +418,7 @@ export default function Home() {
           <div className="section-top-bottom">
             <Image
               id="section-top-bottom-one"
-              src={"/Factory-image2.JPEG"}
+              src={"/Factory-image2.jpeg"}
               alt="About-us Image"
               width={0}
               height={0}
@@ -426,7 +426,7 @@ export default function Home() {
             />
             <Image
               id="section-top-bottom-two"
-              src={"/Factory-image6.JPEG"}
+              src={"/Factory-image6.jpeg"}
               alt="About-us Image"
               width={0}
               height={0}
