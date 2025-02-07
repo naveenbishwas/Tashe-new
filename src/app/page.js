@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import SplitType from "split-type";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import "./page.css";
 
 export default function Home() {
   const textRef = useRef(null);
@@ -215,7 +216,7 @@ export default function Home() {
 
   return (
     <main className="main-container">
-      <div className="back-image">
+      <div className="back-image" id="homepage">
         <div className="background-img">
           <Image
             src={"/Picture7.png"}
@@ -289,8 +290,7 @@ export default function Home() {
               <li
                 className="dropdown"
                 id="for-desk"
-                onMouseEnter={() => setDropdownVisible(true)}
-                onMouseLeave={() => setDropdownVisible(false)}
+                onClick={() => setDropdownVisible(!isDropdownVisible)}
               >
                 <Link id="product-p" href="#">
                   <span id="product-anchor-df">
@@ -300,7 +300,11 @@ export default function Home() {
                       width="16"
                       height="16"
                       fill="currentColor"
-                      className="bi bi-caret-down-fill"
+                      className={`bi bi-caret-down-fill transition-all duration-300 ${
+                        isDropdownVisible
+                          ? "rotate-180 text-orangered"
+                          : "text-black"
+                      }`}
                       viewBox="0 0 16 16"
                     >
                       <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
@@ -351,8 +355,7 @@ export default function Home() {
                   </ul>
                 )}
               </li>
-
-              <li>
+              <li id="about-us">
                 <Link href="/about-us">About us</Link>
               </li>
               <li id="career">
@@ -889,6 +892,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -900,6 +904,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -911,6 +916,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -922,6 +928,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -933,6 +940,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -944,6 +952,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -955,6 +964,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -966,6 +976,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -977,6 +988,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>
@@ -988,6 +1000,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   unoptimized
+                  priority
                 ></Image>
               </div>
             </div>

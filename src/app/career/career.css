@@ -1,4 +1,4 @@
-header {
+#career-header {
   width: 100%;
   position: unset;
   padding-top: 18px;
@@ -35,4 +35,41 @@ header {
   width: 700px;
   height: auto;
   padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .career-detail-form h1 {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .career-detail-form h1 b {
+    font-size: 18px;
+  }
+
+  .career-detail {
+    display: block;
+  }
+
+  .career-detail-form {
+    border: 1px solid orangered;
+    width: 90%;
+    padding: 9px;
+  }
+
+  .career-detail {
+    display: flex;
+    justify-content: center;
+  }
+
+  .career-detail-form svg {
+    width: 16px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .navbar {
+    margin-top: 0 !important;
+  }
 }

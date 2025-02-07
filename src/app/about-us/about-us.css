@@ -2,6 +2,21 @@
   opacity: 0.8;
 }
 
+#about-us img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+#about-us .background-color {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
 .corug-header-text h1 {
   line-height: 1;
   margin-top: 11%;
@@ -34,7 +49,7 @@
 #orange-border {
   width: 600px;
   position: absolute;
-  bottom: -95%;
+  bottom: -130%;
 }
 
 .section-two-top-boxes-one-show img {
@@ -56,7 +71,7 @@
 }
 
 #white-border {
-  bottom: -118%;
+  bottom: -153%;
   position: absolute;
   left: 35%;
 }
@@ -220,10 +235,6 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
     margin-top: 45%;
   }
 
-  #for-desk {
-    display: none;
-  }
-
   #for-mobile {
     display: block;
   }
@@ -252,6 +263,11 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
     margin-top: 64%;
     margin-left: 39%;
     position: unset;
+  }
+
+  .about-us {
+    padding: 5%;
+    background-color: #fff;
   }
 
   #orange-border {
