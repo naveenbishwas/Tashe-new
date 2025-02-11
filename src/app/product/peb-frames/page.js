@@ -89,7 +89,7 @@ const Page = () => {
         <div className="background-img">
           <Image
             id="product-banner"
-            src={"/product1.JPG"}
+            src={"/peb-background.png"}
             alt="Picture of the background loading"
             width={0}
             height={0}
@@ -295,10 +295,10 @@ const Page = () => {
             <h2>1. CLEAR SPAN (CS):</h2>
             <p>
               This type of frame is the most preferred and widely used
-              worldwide. It offers clear access to loading and stacking funcƟ on
-              within the shed. As the pillars or columns are coming at both
-              ends, it gives a very spacious and airy look to the enƟ re shed.
-              We can design these sheds for a width of up to 150 meters.
+              worldwide. It offers clear access to loading and stacking function
+              on within the shed. As the pillars or columns are coming at both
+              ends, it gives a very spacious and airy look to the entire re
+              shed. We can design these sheds for a width of up to 150 meters.
               However, the water discharge from these types of frames is on both
               sides of the shed as this is a TWO SLOPE frame.
             </p>
@@ -373,11 +373,11 @@ const Page = () => {
             <h2>3.SINGLE SLOPE (SS)</h2>
             <p>
               This type of frames are the preferred choice when clients wants or
-              has restricƟ on to drain water of both sides of the shed. It is
-              also chosen by clients in case their exisƟ ng sheds require an
+              has restriction on to drain water of both sides of the shed. It is
+              also chosen by clients in case their existing ng sheds require an
               expansion in width but is not designed to support the load of a
               lean to shed. In case these sheds are very wide then is becomes
-              economical to make the same in MulƟ span.
+              economical to make the same in Multi span.
             </p>
           </div>
           <div className="row-right">
@@ -411,7 +411,7 @@ const Page = () => {
             <h2>4. MULTI GABLE (MG)</h2>
             <p>
               This type of frame is the used in case of wide shed but are more
-              economical than the MulƟ Span frame type. It is lighter because
+              economical than the Multi Span frame type. It is lighter because
               the trusses are smaller hence economical but it comes with a rider
               that it may has a water discharge in the center of the shed which
               would require an internal drainage line, which is not preferred in
@@ -453,7 +453,7 @@ const Page = () => {
               an expansion along the width. It requires the original shed to be
               designed such that it is able to take the load of the expanded
               shed along with the new shed. Lean to sheds are designed to match
-              the roof slope of the exisƟ ng shed such that the water is
+              the roof slope of the existing shed such that the water is
               discharged out of the shed.
             </p>
           </div>
@@ -524,11 +524,11 @@ const Page = () => {
                     viewBox="0 0 16 16"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
                     />
                   </svg>
-                  <h5>+91 123456789</h5>
+                  <h5>+91 8758809966</h5>
                 </div>
                 <div className="footer-left-last-call-mail-2">
                   <svg
@@ -541,7 +541,7 @@ const Page = () => {
                   >
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
                   </svg>
-                  <h5>devkinandansteel@gmail.com</h5>
+                  <h5>info@devkinandansteel.com</h5>
                 </div>
               </div>
 

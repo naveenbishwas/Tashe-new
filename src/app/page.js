@@ -793,7 +793,7 @@ export default function Home() {
             <div className="section-four-box-one-left">
               <div className="section-four-box-one-left-image">
                 <Image
-                  src="/sf-box1.jpeg"
+                  src="/factory-image16.jpeg"
                   alt=""
                   width={0}
                   height={0}
@@ -968,34 +968,11 @@ export default function Home() {
                 ></Image>
               </div>
             </div>
-            <div className="keen-slider__slide number-slide8">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image16.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
+
             <div className="keen-slider__slide number-slide9">
               <div className="unit-right-part">
                 <Image
                   src="Factory-image17.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide10">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image18.jpeg"
                   alt="unit image"
                   width={0}
                   height={0}

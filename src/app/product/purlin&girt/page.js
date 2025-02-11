@@ -91,7 +91,7 @@ const Page = () => {
         <div className="background-img">
           <Image
             id="product-banner"
-            src={"/product1.JPG"}
+            src={"/peb-background.png"}
             alt="Picture of the background loading"
             width={0}
             height={0}
@@ -288,9 +288,9 @@ const Page = () => {
               best infrastructure and experience to make the same. It is very
               light weight and high strength. We use high tensile steel as per
               client’s requirement. It is available in galvanized form as well.
-              It does not require any site fabricaƟ on hence the galvanized coaƟ
-              ng is also not damaged unlike the tradiƟ on purlin made from
-              square or rectangular hollow secƟ on or the structural angles
+              It does not require any site fabrication hence the galvanized
+              coating is also not damaged unlike the tradition purlin made from
+              square or rectangular hollow section or the structural angles
               channels and beams. It minimizes the wastage as well, as it comes
               in customized length up to 12 meter.
             </p>
@@ -418,15 +418,15 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-telephone-fill"
+                    className="bi bi-telephone-fill"
                     viewBox="0 0 16 16"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
                     />
                   </svg>
-                  <h5>+91 123456789</h5>
+                  <h5>+91 8758809966</h5>
                 </div>
                 <div className="footer-left-last-call-mail-2">
                   <svg
@@ -434,12 +434,12 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-envelope-fill"
+                    className="bi bi-envelope-fill"
                     viewBox="0 0 16 16"
                   >
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
                   </svg>
-                  <h5>devkinandansteel@gmail.com</h5>
+                  <h5>info@devkinandansteel.com</h5>
                 </div>
               </div>
 
@@ -450,7 +450,7 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-geo-alt-fill"
+                    className="bi bi-geo-alt-fill"
                     viewBox="0 0 16 16"
                   >
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />

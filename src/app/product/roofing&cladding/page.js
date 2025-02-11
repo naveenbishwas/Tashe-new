@@ -91,7 +91,7 @@ const Page = () => {
         <div className="background-img">
           <Image
             id="product-banner"
-            src={"/product1.JPG"}
+            src={"/peb-background.png"}
             alt="Picture of the background loading"
             width={0}
             height={0}
@@ -277,18 +277,18 @@ const Page = () => {
             <h2>1. Roof Sheet:</h2>
             <p>
               Roofing and cladding it is the most popular profile worldwide. It
-              has been uniquely designed to withstand adverse atmospheric condiƟ
-              ons and heavy to torrenƟ al rain. Its excellent load bearing
-              design allows bigger purlin spacing. It can be supplied in lengths
-              up to 12 mtr to minimize the number of overlaps. It comes in mulƟ
-              ple colors and for bulk requirement we can also make customized
-              colors.
+              has been uniquely designed to withstand adverse atmospheric
+              conditions and heavy to torrential rain. Its excellent load
+              bearing design allows bigger purlin spacing. It can be supplied in
+              lengths up to 12 mtr to minimize the number of overlaps. It comes
+              in multiple colors and for bulk requirement we can also make
+              customized colors.
             </p>
 
             <p>
-              It has our exclusive valley discharge feature and anƟ -capillary
+              It has our exclusive valley discharge feature and anti-capillary
               groove. The valley discharge feature enables the water to flow
-              faster downwards. And the anƟ -capillary groove ensures that water
+              faster downwards. And the anti-capillary groove ensures that water
               does not seep in through the side laps. It can be made from
               different raw materials like Bare Galvalume, Color Coated
               Galvalume, Stainless Steel, Aluminum etc.
@@ -298,7 +298,7 @@ const Page = () => {
               <span className="profit">
                 <h3>Profile Details</h3>
                 <p>Overall Width: 1090 mm</p>
-                <p>EffecƟ ve Width: 1015 mm</p>
+                <p>Effective Width: 1015 mm</p>
                 <p>Crest Height: 28.5 mm</p>
                 <p>Pitch Distance (Center to Center): 203 mm</p>
               </span>
@@ -366,21 +366,21 @@ const Page = () => {
           <div className="row-left">
             <h2>2. Tile Sheets:</h2>
             <p>
-              Tile is aestheƟ cally the number one choice of our customer; it
-              resembles the shape of clay Ɵ les used in residenƟ al structure.
+              Tile is aesthetically the number one choice of our customer; it
+              resembles the shape of clay tiles used in residential structure.
               It is preferred by individual house builders and architects to
-              give their houses a more rusƟ c and homely look. It comes in mulƟ
-              ple color & thickness. The lengths can be customized as well. It
-              has been provided with two sƟ ffening ribs in between two crests
-              to further enhance the strength of the sheet. It also comes with
-              our state-of-the-art anƟ capillary groove, which prevents water
-              seepage from side laps
+              give their houses a more rustic and homely look. It comes in
+              multiple color & thickness. The lengths can be customized as well.
+              It has been provided with two stiffening ribs in between two
+              crests to further enhance the strength of the sheet. It also comes
+              with our state-of-the-art anti-capillary groove, which prevents
+              water seepage from side laps
             </p>
 
             <p>
               It is coated with galvalume, which is an alloy of aluminum and
-              zinc. The Aluminum provides the membrane protecƟ on and zinc
-              provides the sacrificial protecƟ on. Apart from this it is paint
+              zinc. The Aluminum provides the membrane protection and zinc
+              provides the sacrificial protection. Apart from this it is paint
               and primer coated which again acts as a barrier and also enhances
               the look and life of the roofing sheet.
             </p>
@@ -437,10 +437,10 @@ const Page = () => {
             <p>
               Aluminum Roofing sheets are made from aluminum of the highest
               tensile strength available in the industry. It is used mostly in
-              industry with high level of polluƟ on or those whose products or
+              industry with high level of pollution or those whose products or
               byproducts are corrosive in nature. Though they are expensive in
               comparison to galvalume sheet, but its lifecycle cost makes it
-              economical over Ɵme.
+              economical overtime.
             </p>
           </div>
           <div className="row-right">
@@ -488,59 +488,11 @@ const Page = () => {
               The seaming technology is the most used roofing technology across
               the world. Even low sloped structures can be covered with this
               profile without any risk of water seepages. It can withstand
-              adverse weather condiƟ ons and heavy to torrenƟ al rainfall. It
-              can also be used with double skin insulaƟ on system. With our
+              adverse weather conditions and heavy to torrential rainfall. It
+              can also be used with double skin insulation system. With our
               expert team of trained roofing contractors, and site engineers,
               clients can experience best quality roofing.
             </p>
-
-            <div className="profit-adv">
-              <span className="profit">
-                <h3>Profit Details</h3>
-                <p>
-                  It has got a high crest of 70 mm and effecƟ ve covered width
-                  of 475 mm. We have provided three sƟ ffening ribs in its
-                  valley, which further enhances the strength of the sheet. The
-                  seaming is done by powered automaƟ c seaming machine. We have
-                  the opƟ on to do 180 or a 360-degree seaming.
-                </p>
-              </span>
-              <span className="advantages">
-                <h3>Advantage</h3>
-                <li>
-                  <b>Light Weight</b>
-                  –In this Roofing System we provide a Leak Proof Assurance
-                </li>
-                <li>
-                  <b>Large Spanning</b>– As the Roof are formed on site we can
-                  provide single length sheet to cover the full roof
-                </li>
-                <li>
-                  <b>Low Slope</b>– No Problem –The 70 mm high crest and
-                  concealed screw fix system ensures that even low slope roof
-                  remains leak proof
-                </li>
-                <li>
-                  <b>High Strength</b>– Our roof panels are provided with 3
-                  stiffening ribs and 70 mm high crest which provide high
-                  strength
-                </li>
-                <li>
-                  <b>Onsite Profiling</b>– Our machines are mobile and the roll
-                  forming is done on site to provide a single panel from roof to
-                  gutter or eave
-                </li>
-                <li>
-                  <b>No Maintenance Cost</b>– As it is leak proof it requires no
-                  practical maintenance except for cleaning in case of very
-                  dusty environment
-                </li>
-                <li>
-                  <b>Aesthetically</b> – It large spans and screw less looks
-                  makes it look beautiful.
-                </li>
-              </span>
-            </div>
           </div>
           <div className="row-right">
             <div
@@ -565,29 +517,79 @@ const Page = () => {
                 ></Image>
               </span>
             </div>
-            <div
-              className="img-box"
-              id="new-box"
-              onClick={() => {
-                openImagePopup("/roof-img-six.png");
-              }}
-            >
-              <span>
-                <h3>Standing Seam Roofing</h3>
-              </span>
-              <span>
-                <Image
-                  id="room-img-one"
-                  className="frame-imgs"
-                  src="/roof-img-six.png"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </span>
-            </div>
+          </div>
+        </div>
+
+        <div className="df-profit">
+          <div className="profit-adv">
+            <span className="profit">
+              <h3>Profit Details</h3>
+              <p>
+                It has got a high crest of 70 mm and effective covered width of
+                475 mm. We have provided three stiffening ribs in its valley,
+                which further enhances the strength of the sheet. The seaming is
+                done by powered automatic seaming machine. We have the option to
+                do 180 or a 360-degree seaming.
+              </p>
+            </span>
+            <span className="advantages">
+              <h3>Advantage</h3>
+              <li>
+                <b>Light Weight</b>
+                –In this Roofing System we provide a Leak Proof Assurance
+              </li>
+              <li>
+                <b>Large Spanning</b>– As the Roof are formed on site we can
+                provide single length sheet to cover the full roof
+              </li>
+              <li>
+                <b>Low Slope</b>– No Problem –The 70 mm high crest and concealed
+                screw fix system ensures that even low slope roof remains leak
+                proof
+              </li>
+              <li>
+                <b>High Strength</b>– Our roof panels are provided with 3
+                stiffening ribs and 70 mm high crest which provide high strength
+              </li>
+              <li>
+                <b>Onsite Profiling</b>– Our machines are mobile and the roll
+                forming is done on site to provide a single panel from roof to
+                gutter or eave
+              </li>
+              <li>
+                <b>No Maintenance Cost</b>– As it is leak proof it requires no
+                practical maintenance except for cleaning in case of very dusty
+                environment
+              </li>
+              <li>
+                <b>Aesthetically</b> – It large spans and screw less looks makes
+                it look beautiful.
+              </li>
+            </span>
+          </div>
+
+          <div
+            className="img-box"
+            id="new-box"
+            onClick={() => {
+              openImagePopup("/roof-img-six.png");
+            }}
+          >
+            <span>
+              <h3>Standing Seam Roofing</h3>
+            </span>
+            <span>
+              <Image
+                id="room-img-one"
+                className="frame-imgs"
+                src="/roof-img-six.png"
+                alt=""
+                width={0}
+                height={0}
+                unoptimized
+                priority
+              ></Image>
+            </span>
           </div>
         </div>
       </section>
@@ -628,15 +630,15 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-telephone-fill"
+                    className="bi bi-telephone-fill"
                     viewBox="0 0 16 16"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
                     />
                   </svg>
-                  <h5>+91 123456789</h5>
+                  <h5>+91 8758809966</h5>
                 </div>
                 <div className="footer-left-last-call-mail-2">
                   <svg
@@ -644,12 +646,12 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-envelope-fill"
+                    className="bi bi-envelope-fill"
                     viewBox="0 0 16 16"
                   >
                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
                   </svg>
-                  <h5>devkinandansteel@gmail.com</h5>
+                  <h5>info@devkinandansteel.com</h5>
                 </div>
               </div>
 
@@ -660,7 +662,7 @@ const Page = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    class="bi bi-geo-alt-fill"
+                    className="bi bi-geo-alt-fill"
                     viewBox="0 0 16 16"
                   >
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
