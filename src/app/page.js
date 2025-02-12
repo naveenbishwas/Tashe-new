@@ -793,7 +793,7 @@ export default function Home() {
             <div className="section-four-box-one-left">
               <div className="section-four-box-one-left-image">
                 <Image
-                  src="/factory-image16.jpeg"
+                  src="/Factory-image16.jpeg"
                   alt=""
                   width={0}
                   height={0}
