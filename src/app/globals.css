@@ -950,7 +950,25 @@ footer {
   background-color: #1a1c22;
   color: #fff;
   padding-top: 4%;
-  padding-bottom: 2%;
+}
+
+.fotter-by-unnity {
+  display: flex;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.fotter-by-unnity p {
+  font-weight: 800;
+  font-family: "calibrib";
+  font-size: 17px;
+}
+
+.fotter-by-unnity p a {
+  font-weight: normal !important;
 }
 
 .footer-df {

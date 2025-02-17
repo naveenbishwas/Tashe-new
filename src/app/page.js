@@ -9,6 +9,7 @@ import SplitType from "split-type";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import "./page.css";
+import Head from "next/head";
 
 export default function Home() {
   const textRef = useRef(null);
@@ -215,243 +216,254 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="main-container">
-      <div className="back-image" id="homepage">
-        <div className="background-img">
-          <Image
-            src={"/Picture7.png"}
-            alt="Picture of the background"
-            width={0}
-            height={0}
-            unoptimized
-            priority
-          />
+    <>
+      <Head>
+        <title>Devkinandan vee</title>
+        <meta name="description" content="Devkinandan Des" />
+      </Head>
+      <main className="main-container">
+        <div className="back-image" id="homepage">
+          <div className="background-img">
+            <Image
+              src={"/Picture7.png"}
+              alt="Picture of the background"
+              width={0}
+              height={0}
+              unoptimized
+              priority
+            />
+          </div>
+          <div className="background-color"></div>
         </div>
-        <div className="background-color"></div>
-      </div>
-      <header>
-        <div className="navbar">
-          <Link href="/">
-            <div className="logo">
+        <header>
+          <div className="navbar">
+            <Link href="/">
+              <div className="logo">
+                <Image
+                  src={"/dev-logo-white.png"}
+                  alt="Logo"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                />
+              </div>
+            </Link>
+
+            <nav id="navigation">
+              <input
+                type="checkbox"
+                id="check"
+                checked={isNavbarVisible}
+                onChange={toggleNavbar}
+              />
+              <label htmlFor="check" className="checkbtn">
+                <svg
+                  id="nav-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  className="bi bi-list"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+              </label>
+
+              {/* Main Navbar */}
+              <ul
+                className={`main-navbar ${isNavbarVisible ? "open" : "closed"}`}
+              >
+                <span id="cancel_btn" onClick={closeNavbar}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-x"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                  </svg>
+                </span>
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li
+                  className="dropdown"
+                  id="for-desk"
+                  onClick={() => setDropdownVisible(!isDropdownVisible)}
+                >
+                  <Link id="product-p" href="#">
+                    <span id="product-anchor-df">
+                      Product
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        className={`bi bi-caret-down-fill transition-all duration-300 ${
+                          isDropdownVisible
+                            ? "rotate-180 text-orangered"
+                            : "text-black"
+                        }`}
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                      </svg>
+                    </span>
+                  </Link>
+
+                  {isDropdownVisible && (
+                    <ul id="product-li-table">
+                      <li>
+                        <Link href="/product/standard-frame-types">
+                          Standard Frame Types
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product/peb-frames">PEB Frames</Link>
+                      </li>
+                      <li>
+                        <Link href="/product/insulation">Insulation</Link>
+                      </li>
+                      <li>
+                        <Link href="/product/cranes">Cranes</Link>
+                      </li>
+                      <li>
+                        <Link href="/product/mezzanine">Mezzanine</Link>
+                      </li>
+                      <li>
+                        <Link href="/product/purlin&girt">Purlin & Girt</Link>
+                      </li>
+                      <li>
+                        <Link href="/product/roofing&cladding">
+                          Roofing & Cladding
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product/technical-details">
+                          Technical Details
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product/trims&flashing">
+                          Trims & Flashing
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/product/ventilation">Ventilation</Link>
+                      </li>
+                    </ul>
+                  )}
+                </li>
+                <li id="about-us">
+                  <Link href="/about-us">About us</Link>
+                </li>
+                <li id="career">
+                  <Link href="/career">Career</Link>
+                </li>
+                <li id="contact">
+                  <div className="">
+                    <Link id="black" href="/contact-us">
+                      Contact us
+                    </Link>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="header-lin">
+            <hr id="header-line" />
+          </div>
+          <div className="header-text">
+            <h1 ref={textRef}>
+              DEVKINANDAN STEEL & METAL <br /> INDUSTRIES LLP
+            </h1>
+            <p>
+              we are pioneers in the steel and metal industry, committed to
+              delivering top-quality products and unmatched service. With years
+              of expertise and a reputation for excellence, we are your trusted
+              partner for all <span id="orange">steel</span> and{" "}
+              <span id="orange">metals</span> needs
+            </p>
+            <Link href="/about-us">
+              <button>Know More</button>
+            </Link>
+          </div>
+        </header>
+
+        <div className="section-one">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            x="0px"
+            y="0px"
+            viewBox="0 0 956 80.7"
+          >
+            <path
+              className="st0"
+              d="M953.2,64.3L902.5,3.5C900.7,1.3,897.9,0,895,0h-64.3H124.2H59.9c-2.9,0-5.7,1.3-7.5,3.5L1.7,64.3
+	C-3.6,70.7,1,80.4,9.3,80.4h115h706.4h115C953.9,80.4,958.5,70.7,953.2,64.3z"
+            />
+          </svg>
+          <div className="section-one-df">
+            <div className="section-one-top">
+              <div className="section-one-top-left">
+                <h1>BUILD TOMORROW'S DREAMS TODAY</h1>
+              </div>
+              <div className="section-one-top-right">
+                <p>
+                  At DEVKINANDAN STEEL & METAL INDUSTRIES LLP, we believe in
+                  shaping a future that’s stronger, more resilient, and built to
+                  last. With our premium steel and metal solutions, you’re not
+                  just constructing projects—you’re building dreams that stand
+                  the test of time.
+                </p>
+                <Link href="/infrastructure">
+                  <button>Why we are different</button>
+                </Link>
+              </div>
+            </div>
+            <div className="section-top-bottom">
               <Image
-                src={"/dev-logo-white.png"}
-                alt="Logo"
+                id="section-top-bottom-one"
+                src={"/Factory-image2.jpeg"}
+                alt="About-us Image"
                 width={0}
                 height={0}
                 unoptimized
-                priority
+              />
+              <Image
+                id="section-top-bottom-two"
+                src={"/Factory-image6.jpeg"}
+                alt="About-us Image"
+                width={0}
+                height={0}
+                unoptimized
               />
             </div>
-          </Link>
-
-          <nav id="navigation">
-            <input
-              type="checkbox"
-              id="check"
-              checked={isNavbarVisible}
-              onChange={toggleNavbar}
-            />
-            <label htmlFor="check" className="checkbtn">
-              <svg
-                id="nav-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                className="bi bi-list"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-                />
-              </svg>
-            </label>
-
-            {/* Main Navbar */}
-            <ul
-              className={`main-navbar ${isNavbarVisible ? "open" : "closed"}`}
-            >
-              <span id="cancel_btn" onClick={closeNavbar}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  className="bi bi-x"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                </svg>
-              </span>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li
-                className="dropdown"
-                id="for-desk"
-                onClick={() => setDropdownVisible(!isDropdownVisible)}
-              >
-                <Link id="product-p" href="#">
-                  <span id="product-anchor-df">
-                    Product
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      className={`bi bi-caret-down-fill transition-all duration-300 ${
-                        isDropdownVisible
-                          ? "rotate-180 text-orangered"
-                          : "text-black"
-                      }`}
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg>
-                  </span>
-                </Link>
-
-                {isDropdownVisible && (
-                  <ul id="product-li-table">
-                    <li>
-                      <Link href="/product/standard-frame-types">
-                        Standard Frame Types
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/product/peb-frames">PEB Frames</Link>
-                    </li>
-                    <li>
-                      <Link href="/product/insulation">Insulation</Link>
-                    </li>
-                    <li>
-                      <Link href="/product/cranes">Cranes</Link>
-                    </li>
-                    <li>
-                      <Link href="/product/mezzanine">Mezzanine</Link>
-                    </li>
-                    <li>
-                      <Link href="/product/purlin&girt">Purlin & Girt</Link>
-                    </li>
-                    <li>
-                      <Link href="/product/roofing&cladding">
-                        Roofing & Cladding
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/product/technical-details">
-                        Technical Details
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/product/trims&flashing">
-                        Trims & Flashing
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/product/ventilation">Ventilation</Link>
-                    </li>
-                  </ul>
-                )}
-              </li>
-              <li id="about-us">
-                <Link href="/about-us">About us</Link>
-              </li>
-              <li id="career">
-                <Link href="/career">Career</Link>
-              </li>
-              <li id="contact">
-                <div className="">
-                  <Link id="black" href="/contact-us">
-                    Contact us
-                  </Link>
-                </div>
-              </li>
-            </ul>
-          </nav>
+          </div>
         </div>
-
-        <div className="header-lin">
-          <hr id="header-line" />
-        </div>
-        <div className="header-text">
-          <h1 ref={textRef}>
-            DEVKINANDAN STEEL & METAL <br /> INDUSTRIES LLP
-          </h1>
-          <p>
-            we are pioneers in the steel and metal industry, committed to
-            delivering top-quality products and unmatched service. With years of
-            expertise and a reputation for excellence, we are your trusted
-            partner for all <span id="orange">steel</span> and{" "}
-            <span id="orange">metals</span> needs
-          </p>
-          <Link href="/about-us">
-            <button>Know More</button>
-          </Link>
-        </div>
-      </header>
-
-      <div className="section-one">
-        <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 956 80.7">
+        <svg version="1.1" id="Layer_2" x="0px" y="0px" viewBox="0 0 956 80.7">
           <path
             className="st0"
             d="M953.2,64.3L902.5,3.5C900.7,1.3,897.9,0,895,0h-64.3H124.2H59.9c-2.9,0-5.7,1.3-7.5,3.5L1.7,64.3
 	C-3.6,70.7,1,80.4,9.3,80.4h115h706.4h115C953.9,80.4,958.5,70.7,953.2,64.3z"
           />
         </svg>
-        <div className="section-one-df">
-          <div className="section-one-top">
-            <div className="section-one-top-left">
-              <h1>BUILD TOMORROW'S DREAMS TODAY</h1>
-            </div>
-            <div className="section-one-top-right">
-              <p>
-                At DEVKINANDAN STEEL & METAL INDUSTRIES LLP, we believe in
-                shaping a future that’s stronger, more resilient, and built to
-                last. With our premium steel and metal solutions, you’re not
-                just constructing projects—you’re building dreams that stand the
-                test of time.
-              </p>
-              <Link href="/infrastructure">
-                <button>Why we are different</button>
-              </Link>
-            </div>
-          </div>
-          <div className="section-top-bottom">
-            <Image
-              id="section-top-bottom-one"
-              src={"/Factory-image2.jpeg"}
-              alt="About-us Image"
-              width={0}
-              height={0}
-              unoptimized
-            />
-            <Image
-              id="section-top-bottom-two"
-              src={"/Factory-image6.jpeg"}
-              alt="About-us Image"
-              width={0}
-              height={0}
-              unoptimized
-            />
-          </div>
-        </div>
-      </div>
-      <svg version="1.1" id="Layer_2" x="0px" y="0px" viewBox="0 0 956 80.7">
-        <path
-          className="st0"
-          d="M953.2,64.3L902.5,3.5C900.7,1.3,897.9,0,895,0h-64.3H124.2H59.9c-2.9,0-5.7,1.3-7.5,3.5L1.7,64.3
-	C-3.6,70.7,1,80.4,9.3,80.4h115h706.4h115C953.9,80.4,958.5,70.7,953.2,64.3z"
-        />
-      </svg>
-      <div className="section-two">
-        <div className="builder-img">
-          <svg id="builder" version="1.1" viewBox="0 0 367 704">
-            <g>
+        <div className="section-two">
+          <div className="builder-img">
+            <svg id="builder" version="1.1" viewBox="0 0 367 704">
               <g>
-                <path
-                  d="M363,105c0,2.7,0,5.3,0,8c-3.2,0-6.3,0-9.5-0.1c-1.9-0.1-2.6,0.7-2.6,2.6c0,12.3,0,24.6,0,36.9c0,0.9,0,2.7,1,2.3
+                <g>
+                  <path
+                    d="M363,105c0,2.7,0,5.3,0,8c-3.2,0-6.3,0-9.5-0.1c-1.9-0.1-2.6,0.7-2.6,2.6c0,12.3,0,24.6,0,36.9c0,0.9,0,2.7,1,2.3
 			c3.6-1.6,7.7,0.6,11-1.7c0,2.7,0,5.3,0,8c-0.7,0-1.4-0.2-2,0c-17.1,3.1-34.3,4.8-51.7,3.9c-4.5-0.2-5.5,1.1-5.5,5.5
 			c0.1,95.9,0.1,191.9,0.1,287.8c0,82.3,0.1,164.6,0.1,246.9c-101,0-202,0-303,0C1,471.8,1,238.7,0.9,5.5c0-3.7,0.8-4.6,4.6-4.6
 			C105,1,204.5,1,304,1c0,33.6,0,67.1-0.2,100.7c0,3.5,0.8,4.6,4.4,4.4c9.9-0.5,19.6-2.3,29.5-2.1C346.2,104.2,354.5,105.8,363,105z
@@ -580,501 +592,516 @@ export default function Home() {
 			c-8.8,0.8-17.7,1.6-26.5,2.5c0,0.3,0,0.6,0.1,0.8C116.8,127.5,125.6,126.8,134.5,126.1z M228.5,164.4c1.7,0.8,2.8,1.3,3.9,1.8
 			c1.4,0.7,2.1,2,2.9,3.2c0.3,0.4,1.2,0.7,1.7,0.6c0.7-0.1,0.6-0.9,0.7-1.6C238.1,163.8,236.7,163,228.5,164.4z M173.5,336.4
 			c5.1-2.6,6-5.5,3.3-9.9C176.4,330.3,175.3,333.5,173.5,336.4z"
-                />
-                <path
-                  d="M197.4,677.1c-0.4,2.5-0.5,5.6-4,5.7c-3.4,0.1-4.3-2.7-4.3-5.5c0-2.8,0.7-5.5,4.2-5.5C196.7,671.8,197,674.5,197.4,677.1z
+                  />
+                  <path
+                    d="M197.4,677.1c-0.4,2.5-0.5,5.6-4,5.7c-3.4,0.1-4.3-2.7-4.3-5.5c0-2.8,0.7-5.5,4.2-5.5C196.7,671.8,197,674.5,197.4,677.1z
 			"
-                />
-                <path
-                  d="M223.4,675.9c-1.3,0.2-1.9-0.4-1.7-1.7c0.2-1.2-0.5-2.9,1.7-2.8c1.2,0.1,2.3,0.6,2.4,2C226,675.1,224.8,675.6,223.4,675.9
+                  />
+                  <path
+                    d="M223.4,675.9c-1.3,0.2-1.9-0.4-1.7-1.7c0.2-1.2-0.5-2.9,1.7-2.8c1.2,0.1,2.3,0.6,2.4,2C226,675.1,224.8,675.6,223.4,675.9
 			z"
-                />
+                  />
+                </g>
               </g>
-            </g>
-          </svg>
-        </div>
+            </svg>
+          </div>
 
-        <div className="section-two-df">
-          <div className="section-two-top">
-            <h1>Management</h1>
-            <div className="section-two-top-boxes">
-              <div className="section-two-top-boxes-one-hide">
-                <div className="section-two-top-boxes-one-hide-top">
-                  <h3>Mrs Karan Goel- Director</h3>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-arrow-up-right"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                    />
-                  </svg>
+          <div className="section-two-df">
+            <div className="section-two-top">
+              <h1>Management</h1>
+              <div className="section-two-top-boxes">
+                <div className="section-two-top-boxes-one-hide">
+                  <div className="section-two-top-boxes-one-hide-top">
+                    <h3>Mrs Karan Goel- Director</h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-arrow-up-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div className="section-two-top-boxes-one-hide-bottom">
+                    <p>
+                      Mr. karan Goel is young and dynamic person with post
+                      Graduation MBA(Finance & Marketing) with total 8 yers
+                      professional experience in steel industry.
+                    </p>
+                  </div>
                 </div>
-                <div className="section-two-top-boxes-one-hide-bottom">
-                  <p>
-                    Mr. karan Goel is young and dynamic person with post
-                    Graduation MBA(Finance & Marketing) with total 8 yers
-                    professional experience in steel industry.
-                  </p>
-                </div>
-              </div>
 
-              <div className="section-two-top-boxes-one-hide">
-                <div className="section-two-top-boxes-one-hide-top">
-                  <h3 id="pre-con"> Mr. Vaibhav - Director</h3>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-arrow-up-right"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
-                    />
-                  </svg>
-                </div>
-                <div className="section-two-top-boxes-one-hide-bottom">
-                  <p id="coruggated">
-                    Mr. Vaibhav Kulshreshtha is young professional with Diploma
-                    Mechanical Engineering. He is having 8 year exprience in PEB
-                    industry
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="section-three">
-        <hr className="section-three-line" />
-
-        <div className="section-three-df">
-          <div className="section-three-top">
-            <h1>Our Client</h1>
-          </div>
-          <div className="section-three-bottom">
-            <div className="section-three-bottom-logo-one">
-              <div className="">
-                <Image
-                  src={"/Picture1.png"}
-                  width={0}
-                  height={0}
-                  alt="alfanar"
-                  unoptimized
-                  style={{ width: "120px", height: "auto" }}
-                ></Image>
-              </div>
-              <div className="">
-                <Image
-                  src="/Picture2.png"
-                  alt="ardan"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "100px", height: "auto" }}
-                />
-              </div>
-              <div className="">
-                <Image
-                  src="/Picture3.png"
-                  alt="danish"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "150px", height: "auto" }}
-                />
-              </div>
-              <div className="">
-                <Image
-                  src="/Picture4.png"
-                  alt="ets"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "120px", height: "auto" }}
-                />
-              </div>
-            </div>
-            <div className="section-three-bottom-logo-two">
-              <div className="">
-                <Image
-                  src={"/Picture1.png"}
-                  width={0}
-                  height={0}
-                  alt="alfanar"
-                  unoptimized
-                  style={{ width: "120px", height: "auto" }}
-                ></Image>
-              </div>
-              <div className="">
-                <Image
-                  src="/Picture2.png"
-                  alt="ardan"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "100px", height: "auto" }}
-                />
-              </div>
-              <div className="">
-                <Image
-                  src="/Picture3.png"
-                  alt="danish"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "150px", height: "auto" }}
-                />
-              </div>
-              <div className="">
-                <Image
-                  src="/Picture4.png"
-                  alt="ets"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  style={{ width: "120px", height: "auto" }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr className="section-three-line" />
-      </div>
-      <div className="vision-mission">
-        <h1>Vision & Mission</h1>
-        <div className="vision">
-          <h2>Our Vision</h2>
-          <p>
-            Our vision is to be the industry leader in providing innovative,
-            durable, and cost-effective pre-engineered building solutions that
-            meet the evolving needs of our clients. We strive to deliver
-            high-quality structures that combine efficiency, sustainability, and
-            design flexibility, ensuring that every project is completed on time
-            and within budget. By leveraging cutting-edge technology,
-            sustainable practices, and a customer-focused approach, we aim to
-            reshape the construction landscape and become the preferred partner
-            for businesses and industries worldwide, contributing to the growth
-            and success of our communities.
-          </p>
-        </div>
-
-        <div className="mission">
-          <h2>Our Mission</h2>
-          <p>
-            Devkinandan Steel & Metal Industries LLP will consistently be the
-            preferred partner of steel building users, their consultants and
-            contractors. We give value for money by prompt delivery of high
-            quality buildings, supported by accurate engineering designs through
-            our investments in people, technology and manufacturing capacity.
-            Profitable growth and our passion for innovation let us continue to
-            offer rewarding careers to our employees and continuously provide
-            excellent service to our customers.
-          </p>
-        </div>
-      </div>
-      <div className="section-four">
-        <div className="section-four-df">
-          <div className="section-four-header">
-            <h1>
-              WE THRIVE ON <span id="imposs">IMPOSSIBLE</span>
-            </h1>
-          </div>
-
-          <div className="section-four-box-one">
-            <div className="section-four-box-one-left">
-              <div className="section-four-box-one-left-image">
-                <Image
-                  src="/Factory-image16.jpeg"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </div>
-              <div className="section-four-box-one-left-text">
-                <Image
-                  src={"volta-logo.png"}
-                  alt=""
-                  width={70}
-                  height={40}
-                  unoptimized
-                ></Image>
-                <h1>Voltamp Transformers, Oman: 3D modelling</h1>
-                <p>
-                  Weight of the tank is a very critical part for any
-                  transformer. We worked with our customer Voltamp and started
-                  designing all the tanks on the latest 3D software. This not
-                  only helped us to zero down on the weight of the tanks but
-                  also helped us improvise the tank designs with continuous
-                  discussion with customer and thereby achieving a seamless
-                  production process. Now all our tanks are designed on 3D
-                  modelling and we are able to control many unexpected problems
-                  during our designing stage itself.
-                </p>
-              </div>
-            </div>
-            <div className="section-four-box-one-right">
-              <h1>01</h1>
-            </div>
-          </div>
-          <hr id="sc-four-line" />
-
-          <div className="section-four-box-one">
-            <div className="section-four-box-one-left">
-              <div className="section-four-box-one-left-image">
-                <Image
-                  src="/sf-box2.jpeg"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                />
-              </div>
-              <div className="section-four-box-one-left-text">
-                <Image
-                  src={"sneda2.png"}
-                  alt=""
-                  width={90}
-                  height={50}
-                  unoptimized
-                ></Image>
-                <h1>Sneda Transformers, Ghana: Designing and Supply Chain</h1>
-                <p>
-                  Our client, Sneda Transformers in Ghana, was starting a new
-                  factory and they chose us to be their supplier for tanks. We
-                  not only helped them in designing the complete mechanical
-                  structure of the tank but also helped procure all the major
-                  raw materials for transformer and send them in the same
-                  container along with tanks. This helped them save their
-                  resources of following up with various vendors as we procured
-                  everything and shipped along with tanks thereby creating cost
-                  savings in logistics.
-                </p>
-              </div>
-            </div>
-            <div className="section-four-box-one-right">
-              <h1>02</h1>
-            </div>
-          </div>
-          <hr id="sc-four-line" />
-        </div>
-      </div>
-      <div className="factory-unit">
-        <div className="factory-unit-heading">
-          <h1>Factory Unit</h1>
-          <p>
-            Our factory unit is built on precision, efficiency, and innovation,
-            ensuring top-quality production at every stage. With a commitment to
-            sustainability, we integrate advanced manufacturing techniques to
-            optimize performance while reducing environmental impact. Every
-            product reflects our dedication to craftsmanship, reliability, and
-            industry-leading standards. By continuously evolving, we power
-            industries with excellence, meeting the demands of a dynamic and
-            competitive market
-          </p>
-        </div>
-        <div className="navigation-wrapper">
-          <div ref={sliderRef} className="keen-slider">
-            <div className="keen-slider__slide number-slide1">
-              <div className="unit-right-part">
-                <Image
-                  src="Untitled-design.png"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide2">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image10.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide3">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image11.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide4">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image12.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide5">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image13.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide6">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image14.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-            <div className="keen-slider__slide number-slide7">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image15.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-
-            <div className="keen-slider__slide number-slide9">
-              <div className="unit-right-part">
-                <Image
-                  src="Factory-image17.jpeg"
-                  alt="unit image"
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <div className="footer-df">
-          <div className="footer-left">
-            <div className="footer-left-top">
-              <h2>DEVKINANDAN STEEL & METAL INDUSTRIES LLP</h2>
-              <p>
-                A great place to work where people are inspired, involved and
-                motivated.
-              </p>
-              <hr id="footer-line" />
-            </div>
-            <div className="footer-left-middle"></div>
-            <div className="footer-left-last">
-              <div className="footer-left-last-call-mail">
-                <div className="footer-left-last-call-mail-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-telephone-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                    />
-                  </svg>
-                  <h5>+91 8758809966</h5>
-                </div>
-                <div className="footer-left-last-call-mail-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-envelope-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                  </svg>
-                  <h5>info@devkinandansteel.com</h5>
-                </div>
-              </div>
-
-              <div className="footer-left-last-address">
-                <div className="footer-left-last-address-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    className="bi bi-geo-alt-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                  </svg>
-                  <h6>
-                    Survey no 786, near PCBL, Village-Vadal, Mundra - kutch,
-                    Gujurat.
-                  </h6>
+                <div className="section-two-top-boxes-one-hide">
+                  <div className="section-two-top-boxes-one-hide-top">
+                    <h3 id="pre-con"> Mr. Vaibhav - Director</h3>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-arrow-up-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div className="section-two-top-boxes-one-hide-bottom">
+                    <p id="coruggated">
+                      Mr. Vaibhav Kulshreshtha is young professional with
+                      Diploma Mechanical Engineering. He is having 8 year
+                      exprience in PEB industry
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="footer-right">
-            <div className="footer-right-header">
+        </div>
+        <div className="section-three">
+          <hr className="section-three-line" />
+
+          <div className="section-three-df">
+            <div className="section-three-top">
+              <h1>Our Client</h1>
+            </div>
+            <div className="section-three-bottom">
+              <div className="section-three-bottom-logo-one">
+                <div className="">
+                  <Image
+                    src={"/Picture1.png"}
+                    width={0}
+                    height={0}
+                    alt="alfanar"
+                    unoptimized
+                    style={{ width: "120px", height: "auto" }}
+                  ></Image>
+                </div>
+                <div className="">
+                  <Image
+                    src="/Picture2.png"
+                    alt="ardan"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    style={{ width: "100px", height: "auto" }}
+                  />
+                </div>
+                <div className="">
+                  <Image
+                    src="/Picture3.png"
+                    alt="danish"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    style={{ width: "150px", height: "auto" }}
+                  />
+                </div>
+                <div className="">
+                  <Image
+                    src="/Picture4.png"
+                    alt="ets"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    style={{ width: "120px", height: "auto" }}
+                  />
+                </div>
+              </div>
+              <div className="section-three-bottom-logo-two">
+                <div className="">
+                  <Image
+                    src={"/Picture1.png"}
+                    width={0}
+                    height={0}
+                    alt="alfanar"
+                    unoptimized
+                    style={{ width: "120px", height: "auto" }}
+                  ></Image>
+                </div>
+                <div className="">
+                  <Image
+                    src="/Picture2.png"
+                    alt="ardan"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    style={{ width: "100px", height: "auto" }}
+                  />
+                </div>
+                <div className="">
+                  <Image
+                    src="/Picture3.png"
+                    alt="danish"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    style={{ width: "150px", height: "auto" }}
+                  />
+                </div>
+                <div className="">
+                  <Image
+                    src="/Picture4.png"
+                    alt="ets"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    style={{ width: "120px", height: "auto" }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr className="section-three-line" />
+        </div>
+        <div className="vision-mission">
+          <h1>Vision & Mission</h1>
+          <div className="vision">
+            <h2>Our Vision</h2>
+            <p>
+              Our vision is to be the industry leader in providing innovative,
+              durable, and cost-effective pre-engineered building solutions that
+              meet the evolving needs of our clients. We strive to deliver
+              high-quality structures that combine efficiency, sustainability,
+              and design flexibility, ensuring that every project is completed
+              on time and within budget. By leveraging cutting-edge technology,
+              sustainable practices, and a customer-focused approach, we aim to
+              reshape the construction landscape and become the preferred
+              partner for businesses and industries worldwide, contributing to
+              the growth and success of our communities.
+            </p>
+          </div>
+
+          <div className="mission">
+            <h2>Our Mission</h2>
+            <p>
+              Devkinandan Steel & Metal Industries LLP will consistently be the
+              preferred partner of steel building users, their consultants and
+              contractors. We give value for money by prompt delivery of high
+              quality buildings, supported by accurate engineering designs
+              through our investments in people, technology and manufacturing
+              capacity. Profitable growth and our passion for innovation let us
+              continue to offer rewarding careers to our employees and
+              continuously provide excellent service to our customers.
+            </p>
+          </div>
+        </div>
+        <div className="section-four">
+          <div className="section-four-df">
+            <div className="section-four-header">
               <h1>
-                WE LOVE TO <span id="footer-hear">HEAR FROM YOU</span>
+                WE THRIVE ON <span id="imposs">IMPOSSIBLE</span>
               </h1>
-              <form action="">
-                <div className="form-top">
-                  <input type="text" name="" id="name" placeholder="Name" />
-                  <input type="email" name="" id="email" placeholder="Email" />
-                  <input type="tel" name="" id="phone" placeholder="Phone" />
+            </div>
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <Image
+                    src="/Factory-image16.jpeg"
+                    alt=""
+                    width={0}
+                    height={0}
+                    unoptimized
+                  />
                 </div>
-                <div className="form-middle">
-                  <textarea
-                    cols="69"
-                    rows="8"
-                    placeholder="Your Message"
-                  ></textarea>
+                <div className="section-four-box-one-left-text">
+                  <Image
+                    src={"volta-logo.png"}
+                    alt=""
+                    width={70}
+                    height={40}
+                    unoptimized
+                  ></Image>
+                  <h1>Voltamp Transformers, Oman: 3D modelling</h1>
+                  <p>
+                    Weight of the tank is a very critical part for any
+                    transformer. We worked with our customer Voltamp and started
+                    designing all the tanks on the latest 3D software. This not
+                    only helped us to zero down on the weight of the tanks but
+                    also helped us improvise the tank designs with continuous
+                    discussion with customer and thereby achieving a seamless
+                    production process. Now all our tanks are designed on 3D
+                    modelling and we are able to control many unexpected
+                    problems during our designing stage itself.
+                  </p>
                 </div>
-                <div className="from-bottom">
-                  <button>Submit</button>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>01</h1>
+              </div>
+            </div>
+            <hr id="sc-four-line" />
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <Image
+                    src="/sf-box2.jpeg"
+                    alt=""
+                    width={0}
+                    height={0}
+                    unoptimized
+                  />
                 </div>
-              </form>
+                <div className="section-four-box-one-left-text">
+                  <Image
+                    src={"sneda2.png"}
+                    alt=""
+                    width={90}
+                    height={50}
+                    unoptimized
+                  ></Image>
+                  <h1>Sneda Transformers, Ghana: Designing and Supply Chain</h1>
+                  <p>
+                    Our client, Sneda Transformers in Ghana, was starting a new
+                    factory and they chose us to be their supplier for tanks. We
+                    not only helped them in designing the complete mechanical
+                    structure of the tank but also helped procure all the major
+                    raw materials for transformer and send them in the same
+                    container along with tanks. This helped them save their
+                    resources of following up with various vendors as we
+                    procured everything and shipped along with tanks thereby
+                    creating cost savings in logistics.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>02</h1>
+              </div>
+            </div>
+            <hr id="sc-four-line" />
+          </div>
+        </div>
+        <div className="factory-unit">
+          <div className="factory-unit-heading">
+            <h1>Factory Unit</h1>
+            <p>
+              Our factory unit is built on precision, efficiency, and
+              innovation, ensuring top-quality production at every stage. With a
+              commitment to sustainability, we integrate advanced manufacturing
+              techniques to optimize performance while reducing environmental
+              impact. Every product reflects our dedication to craftsmanship,
+              reliability, and industry-leading standards. By continuously
+              evolving, we power industries with excellence, meeting the demands
+              of a dynamic and competitive market
+            </p>
+          </div>
+          <div className="navigation-wrapper">
+            <div ref={sliderRef} className="keen-slider">
+              <div className="keen-slider__slide number-slide1">
+                <div className="unit-right-part">
+                  <Image
+                    src="Untitled-design.png"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
+              <div className="keen-slider__slide number-slide2">
+                <div className="unit-right-part">
+                  <Image
+                    src="Factory-image10.jpeg"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
+              <div className="keen-slider__slide number-slide3">
+                <div className="unit-right-part">
+                  <Image
+                    src="Factory-image11.jpeg"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
+              <div className="keen-slider__slide number-slide4">
+                <div className="unit-right-part">
+                  <Image
+                    src="Factory-image12.jpeg"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
+              <div className="keen-slider__slide number-slide5">
+                <div className="unit-right-part">
+                  <Image
+                    src="Factory-image13.jpeg"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
+              <div className="keen-slider__slide number-slide6">
+                <div className="unit-right-part">
+                  <Image
+                    src="Factory-image14.jpeg"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
+              <div className="keen-slider__slide number-slide7">
+                <div className="unit-right-part">
+                  <Image
+                    src="Factory-image15.jpeg"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
+
+              <div className="keen-slider__slide number-slide9">
+                <div className="unit-right-part">
+                  <Image
+                    src="Factory-image17.jpeg"
+                    alt="unit image"
+                    width={0}
+                    height={0}
+                    unoptimized
+                    priority
+                  ></Image>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
-    </main>
+        <footer>
+          <div className="footer-df">
+            <div className="footer-left">
+              <div className="footer-left-top">
+                <h2>DEVKINANDAN STEEL & METAL INDUSTRIES LLP</h2>
+                <p>
+                  A great place to work where people are inspired, involved and
+                  motivated.
+                </p>
+                <hr id="footer-line" />
+              </div>
+              <div className="footer-left-middle"></div>
+              <div className="footer-left-last">
+                <div className="footer-left-last-call-mail">
+                  <div className="footer-left-last-call-mail-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-telephone-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                      />
+                    </svg>
+                    <h5>+91 8758809966</h5>
+                  </div>
+                  <div className="footer-left-last-call-mail-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-envelope-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                    </svg>
+                    <h5>info@devkinandansteel.com</h5>
+                  </div>
+                </div>
+
+                <div className="footer-left-last-address">
+                  <div className="footer-left-last-address-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      className="bi bi-geo-alt-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                    </svg>
+                    <h6>
+                      Survey no 786, near PCBL, Village-Vadal, Mundra - kutch,
+                      Gujurat.
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="footer-right">
+              <div className="footer-right-header">
+                <h1>
+                  WE LOVE TO <span id="footer-hear">HEAR FROM YOU</span>
+                </h1>
+                <form action="">
+                  <div className="form-top">
+                    <input type="text" name="" id="name" placeholder="Name" />
+                    <input
+                      type="email"
+                      name=""
+                      id="email"
+                      placeholder="Email"
+                    />
+                    <input type="tel" name="" id="phone" placeholder="Phone" />
+                  </div>
+                  <div className="form-middle">
+                    <textarea
+                      cols="69"
+                      rows="8"
+                      placeholder="Your Message"
+                    ></textarea>
+                  </div>
+                  <div className="from-bottom">
+                    <button>Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div className="fotter-by-unnity">
+            <p>
+              Designed By{" "}
+              <a href="https://unnity.in/" target="_blank">
+                unnity.in
+              </a>
+            </p>
+          </div>
+        </footer>
+      </main>
+    </>
   );
 }
