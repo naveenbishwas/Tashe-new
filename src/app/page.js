@@ -425,7 +425,7 @@ export default function Home() {
                   just constructing projects—you’re building dreams that stand
                   the test of time.
                 </p>
-                <Link href="/infrastructure">
+                <Link href="/about-us">
                   <button>Why we are different</button>
                 </Link>
               </div>
@@ -612,7 +612,7 @@ export default function Home() {
               <div className="section-two-top-boxes">
                 <div className="section-two-top-boxes-one-hide">
                   <div className="section-two-top-boxes-one-hide-top">
-                    <h3>Mrs Karan Goel- Director</h3>
+                    <h3>Mr Karan Goel- Director</h3>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -655,9 +655,8 @@ export default function Home() {
                   </div>
                   <div className="section-two-top-boxes-one-hide-bottom">
                     <p id="coruggated">
-                      Mr. Vaibhav Kulshreshtha is young professional with
-                      Diploma Mechanical Engineering. He is having 8 year
-                      exprience in PEB industry
+                      Mr. Vaibhav is young professional with Diploma Mechanical
+                      Engineering. He is having 8 year exprience in PEB industry
                     </p>
                   </div>
                 </div>

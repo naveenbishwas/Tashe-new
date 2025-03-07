@@ -37,7 +37,9 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const icons = L.icon({ iconUrl: "/marker.png" });
 
 const position = [28.6139, 77.209];
-const position2 = [22.6139, 77.209];
+const position2 = [24.6139, 75.209];
+const position3 = [27.1502, 68.8311];
+const position4 = [29.122, 69.8905];
 
 const Map = () => {
   return (
@@ -76,7 +78,35 @@ const Map = () => {
               unoptimized
               priority
             />
+            MP branch of Devkinandan.
+          </Popup>
+        </Marker>
+
+        <Marker position={position3} icon={icons} id="map-icon">
+          <Popup>
+            <Image
+              src={"/banner3.JPG"}
+              alt="Picture of the background"
+              width={100}
+              height={100}
+              unoptimized
+              priority
+            />
             Gujurat branch of Devkinandan.
+          </Popup>
+        </Marker>
+
+        <Marker position={position4} icon={icons} id="map-icon">
+          <Popup>
+            <Image
+              src={"/banner3.JPG"}
+              alt="Picture of the background"
+              width={100}
+              height={100}
+              unoptimized
+              priority
+            />
+            Rajasthan branch of Devkinandan.
           </Popup>
         </Marker>
       </MapContainer>
