@@ -803,33 +803,31 @@ export default function Home() {
             <div className="section-four-box-one">
               <div className="section-four-box-one-left">
                 <div className="section-four-box-one-left-image">
-                  <Image
-                    src="/Factory-image16.jpeg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
+                  <video autoPlay muted loop playsInline>
+                    <source src="./purple.mp4" type="video/mp4"></source>
+                  </video>
                 </div>
                 <div className="section-four-box-one-left-text">
-                  <Image
-                    src={"volta-logo.png"}
-                    alt=""
-                    width={70}
-                    height={40}
-                    unoptimized
-                  ></Image>
-                  <h1>Voltamp Transformers, Oman: 3D modelling</h1>
+                  <h1>
+                    Purple Drops - PEB Structure with Mezzanine Floor and Goods
+                    Lift
+                  </h1>
                   <p>
-                    Weight of the tank is a very critical part for any
-                    transformer. We worked with our customer Voltamp and started
-                    designing all the tanks on the latest 3D software. This not
-                    only helped us to zero down on the weight of the tanks but
-                    also helped us improvise the tank designs with continuous
-                    discussion with customer and thereby achieving a seamless
-                    production process. Now all our tanks are designed on 3D
-                    modelling and we are able to control many unexpected
-                    problems during our designing stage itself.
+                    We proudly designed, manufactured, and installed a robust
+                    Pre-Engineered Building (PEB) structure for Purple Drops, a
+                    leading water bottle processing company. This project
+                    featured a customized mezzanine floor, offering additional
+                    workspace and storage, along with a seamlessly integrated
+                    goods lift for efficient material handling.
+                  </p>
+
+                  <p>
+                    From the initial 3D design to the final installation, our
+                    team ensured precision, quality, and timely execution. The
+                    result is a durable, functional, and aesthetically pleasing
+                    facility that supports Purple Drops’ operational excellence.
+                    <br />
+                    Explore the visuals to see our craftsmanship in action.
                   </p>
                 </div>
               </div>
@@ -842,38 +840,156 @@ export default function Home() {
             <div className="section-four-box-one">
               <div className="section-four-box-one-left">
                 <div className="section-four-box-one-left-image">
-                  <Image
-                    src="/sf-box2.jpeg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    unoptimized
-                  />
+                  <video autoPlay muted loop playsInline>
+                    <source src="./yash.mp4" type="video/mp4"></source>
+                  </video>
                 </div>
                 <div className="section-four-box-one-left-text">
-                  <Image
-                    src={"sneda2.png"}
-                    alt=""
-                    width={90}
-                    height={50}
-                    unoptimized
-                  ></Image>
-                  <h1>Sneda Transformers, Ghana: Designing and Supply Chain</h1>
+                  <h1>
+                    Yash Packaging and Paras Enterprises - PEB Structure with
+                    Mezzanine Floor and Complete Civil Work
+                  </h1>
                   <p>
-                    Our client, Sneda Transformers in Ghana, was starting a new
-                    factory and they chose us to be their supplier for tanks. We
-                    not only helped them in designing the complete mechanical
-                    structure of the tank but also helped procure all the major
-                    raw materials for transformer and send them in the same
-                    container along with tanks. This helped them save their
-                    resources of following up with various vendors as we
-                    procured everything and shipped along with tanks thereby
-                    creating cost savings in logistics.
+                    We had the privilege of designing, manufacturing, and
+                    installing a state-of-the-art Pre-Engineered Building (PEB)
+                    for Yash Packaging and Paras Enterprises, a prominent name
+                    in the packaging material industry. This comprehensive
+                    project included a customized mezzanine floor, along with
+                    all necessary civil work, including staff rooms, washrooms,
+                    and essential facilities.
+                  </p>
+                  <p>
+                    Our meticulous 3D design process ensured optimal space
+                    utilization and functionality, resulting in a
+                    well-structured and fully equipped workspace. From concept
+                    to completion, we delivered a tailored solution that meets
+                    the operational needs of the client.
+                  </p>
+
+                  <p>
+                    Explore the photos and videos to witness our dedication to
+                    quality and excellence.
                   </p>
                 </div>
               </div>
               <div className="section-four-box-one-right">
                 <h1>02</h1>
+              </div>
+            </div>
+            <hr id="sc-four-line" />
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="./nine.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Nine Corporation - PEB Structure with Mezzanine Floor and
+                    Ventilation Systems
+                  </h1>
+                  <p>
+                    We successfully designed, manufactured, and installed a
+                    durable Pre-Engineered Building (PEB) for Nine Corporation
+                    near Mundra, Gujarat. Specializing in tyre recycling and
+                    storage, the facility required customized solutions to meet
+                    its operational needs.
+                  </p>
+                  <p>
+                    The project included the installation of a robust mezzanine
+                    floor in one of the sheds for optimized space utilization.
+                    Additionally, we constructed a dedicated shed for machinery,
+                    equipped with efficient ventilation systems, ridge vents,
+                    and other essential structural features. Every aspect was
+                    carefully designed and executed to ensure durability,
+                    safety, and functionality.
+                    <br />
+                    <br />
+                    Browse through the images and videos to see our commitment
+                    to excellence in action.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>03</h1>
+              </div>
+            </div>
+            <hr id="sc-four-line" />
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="./ashok.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Akshar Industries - Heavy PEB Structure for Steel Trading
+                    Operations
+                  </h1>
+                  <p>
+                    We proudly designed, manufactured, and installed a robust
+                    Heavy Structure for Akshar Industries in Gandhidham,
+                    Gujarat. Specializing in the trading of steel components,
+                    plates, angles, and more, the company needed a reliable and
+                    spacious structure to support its operations.
+                  </p>
+                  <p>
+                    Our expert team provided the most effective solution,
+                    ensuring maximum space utilization and structural strength
+                    to accommodate heavy materials. The building was
+                    meticulously designed to offer long-term durability and
+                    seamless functionality.
+                    <br />
+                    <br />
+                    Take a look at the images and videos below to see how we
+                    brought this project to life with our dedication to quality
+                    and engineering excellence.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>04</h1>
+              </div>
+            </div>
+            <hr id="sc-four-line" />
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="./agri.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Akshar Agri Processing Pvt. Ltd. - Conventional Structure
+                    for Agri Product Processing
+                  </h1>
+                  <p>
+                    We successfully designed, manufactured, and installed a
+                    conventional steel structure for Akshar Agri Processing Pvt.
+                    Ltd. near Mundra, Gujarat. As a company engaged in the
+                    processing of agricultural products, they required a robust
+                    and spacious facility to streamline their operations.
+                  </p>
+                  <p>
+                    Our team provided the most efficient and durable solution,
+                    ensuring optimal space utilization and structural strength.
+                    The structure was meticulously designed to support long-term
+                    functionality, catering to the company’s growing needs.
+                    <br />
+                    <br />
+                    Explore the photos and videos to see our commitment to
+                    delivering quality and excellence.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>05</h1>
               </div>
             </div>
             <hr id="sc-four-line" />

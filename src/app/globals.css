@@ -604,6 +604,7 @@ header {
   color: grey;
   font-weight: normal;
   margin-left: 41%;
+  transition: all 0.3s ease;
 }
 
 .section-four-box-one-left-text h1 {
