@@ -17,6 +17,8 @@ export default function Home() {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
   const toggleNavbar = () => {
     setNavbarVisible((prev) => !prev);
   };
@@ -804,7 +806,7 @@ export default function Home() {
               <div className="section-four-box-one-left">
                 <div className="section-four-box-one-left-image">
                   <video autoPlay muted loop playsInline>
-                    <source src="./purple.mp4" type="video/mp4"></source>
+                    <source src="./yash.mp4" type="video/mp4"></source>
                   </video>
                 </div>
                 <div className="section-four-box-one-left-text">
@@ -841,7 +843,7 @@ export default function Home() {
               <div className="section-four-box-one-left">
                 <div className="section-four-box-one-left-image">
                   <video autoPlay muted loop playsInline>
-                    <source src="./yash.mp4" type="video/mp4"></source>
+                    <source src="./purple.mp4" type="video/mp4"></source>
                   </video>
                 </div>
                 <div className="section-four-box-one-left-text">
@@ -990,6 +992,44 @@ export default function Home() {
               </div>
               <div className="section-four-box-one-right">
                 <h1>05</h1>
+              </div>
+            </div>
+            <hr id="sc-four-line" />
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="./agro.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Ashok Agro Commodity - PEB Warehouse for Rental Purpose
+                  </h1>
+                  <p>
+                    We had the opportunity to design, manufacture, and install a
+                    high-quality Pre-Engineered Building (PEB) for Ashok Agro
+                    Commodity near Mundra, Gujarat. As a versatile business
+                    entity, they required a durable and spacious warehouse to
+                    offer on rent.
+                  </p>
+                  <p>
+                    Our team provided the most efficient solution, ensuring
+                    maximum space utilization and structural strength. The
+                    design was carefully tailored to guarantee longevity and
+                    adaptability for various industrial uses. From concept to
+                    completion, every detail was executed with precision to meet
+                    the client’s long-term goals.
+                    <br />
+                    <br />
+                    Explore the images and videos to witness our commitment to
+                    quality and innovation.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>06</h1>
               </div>
             </div>
             <hr id="sc-four-line" />

@@ -33,11 +33,20 @@
   color: #f07c10;
 }
 
-.section-four-box-one:hover .section-four-box-one-left-text {
-  width: 55%;
-}
+@media screen and (max-width: 768px) {
+  .section-four-box-one-left-image video {
+    width: 85vw;
+    height: 400px;
+    object-fit: cover;
+  }
 
-.section-four-box-one-left-text {
-  transition: width 0.5s ease;
-  width: 100%;
+  .h1-small {
+    font-size: 40px;
+    transition: font-size 0.3s ease;
+  }
+
+  .h1-large {
+    font-size: 80px;
+    transition: font-size 0.3s ease;
+  }
 }
